@@ -2,24 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAYA - Sustainable Agriculture Youth Alliance</title>
-    <meta name="description" content="Empowering youth in sustainable agriculture in Zambia through innovative programs and technology partnerships.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#15803d">
+    <meta name="color-scheme" content="light">
+    <title>SAYA - Sustainable Agricultural Yield Alliance</title>
+    <meta name="description" content="Bridging farmers and markets across Zambia through sustainable agriculture, youth empowerment, and technology partnerships.">
     <meta name="keywords" content="sustainable agriculture, youth alliance, Zambia farming, SAYA, Hapitec">
-    <meta property="og:title" content="SAYA - Sustainable Agriculture Youth Alliance">
+    <meta property="og:title" content="SAYA - Sustainable Agricultural Yield Alliance">
     <meta property="og:description" content="Empowering youth in sustainable agriculture in Zambia through innovative programs and technology partnerships.">
-    <meta property="og:image" content="Hapitec Company Logo/Hapitec Fully Transparent.png">
+    <meta property="og:image" content="images/saya-logo.jpeg">
+    <link rel="icon" href="images/saya-logo.jpeg" type="image/jpeg">
     <meta property="og:url" content="https://saya-zambia.org">
     <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --color-primary: #15803d;
+            --color-primary-dark: #166534;
+            --color-primary-light: #16a34a;
+            --color-accent: #059669;
+            --color-surface: #ffffff;
+            --color-muted: #4b5563;
+            --color-border: #e5e7eb;
+            --color-bg-soft: #f0fdf4;
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.1);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        button {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :focus-visible {
+            outline: 2px solid #16a34a;
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -48px;
+            left: 16px;
+            background: #15803d;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            z-index: 10001;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: #1f2937;
             overflow-x: hidden;
@@ -33,7 +102,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('Hapitec Company Logo/Hapitec Fully Transparent.png');
+            background-image: url('images/saya-logo.jpeg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 300px;
@@ -43,6 +112,57 @@
         }
 
         /* Navigation */
+        .news-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+        }
+
+        .event-gallery {
+            margin-top: 40px;
+        }
+
+        .event-gallery h3 {
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 16px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #ecfdf5;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .navbar {
             position: fixed;
             top: 0;
@@ -51,7 +171,8 @@
             background: rgba(255, 255, 255, 0.95);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(22, 163, 74, 0.08);
             z-index: 1000;
             transition: transform 0.3s ease;
         }
@@ -75,6 +196,11 @@
             align-items: center;
             gap: 12px;
             cursor: pointer;
+        }
+
+        .saya-logo {
+            height: 48px;
+            width: auto;
         }
 
         .hapitec-logo {
@@ -186,6 +312,7 @@
         .section {
             display: none;
             min-height: 100vh;
+            min-height: 100dvh;
             padding-top: 70px;
         }
 
@@ -244,25 +371,90 @@
             border-radius: 50%;
         }
 
-        .logo-circle {
+        .hero-logo {
             position: relative;
-            background-color: white;
-            padding: 24px;
+            width: clamp(160px, 28vw, 240px);
+            height: auto;
             border-radius: 50%;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        .logo-icon {
-            width: 64px;
-            height: 64px;
-            color: #16a34a;
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 640px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 1.1s both;
+        }
+
+        .hero-stat {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .hero-stat strong {
+            display: block;
+            color: #15803d;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .hero-stat span {
+            color: #4b5563;
+            font-size: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .scroll-hint {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: #15803d;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 8px;
+            animation: fadeInUp 1s ease 1.4s both, bounce 2s ease-in-out 2s infinite;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .scroll-hint svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+
+        .hero-eyebrow {
+            color: var(--color-accent);
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            animation: fadeInUp 1s ease 0.2s both;
         }
 
         .main-title {
             color: #059669;
+            font-size: clamp(1.2rem, 3.8vw, 2.25rem);
             letter-spacing: 0.1em;
             margin-bottom: 16px;
             text-transform: uppercase;
+            line-height: 1.25;
             animation: fadeInUp 1s ease 0.2s both;
         }
 
@@ -404,8 +596,19 @@
             padding: 80px 24px;
         }
 
+        .award-card {
+            border: 1px solid rgba(22, 163, 74, 0.12);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .award-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
         .section-container {
-            max-width: 1024px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -416,7 +619,9 @@
 
         .section-header h1 {
             color: #15803d;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
             margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         .section-header .subtitle {
@@ -669,27 +874,97 @@
             color: #bbf7d0;
         }
 
+        .decorative {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(64px);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .dec-1 {
+            top: 10%;
+            left: 5%;
+            width: 200px;
+            height: 200px;
+            background: #4ade80;
+        }
+
+        .dec-2 {
+            bottom: 10%;
+            right: 5%;
+            width: 250px;
+            height: 250px;
+            background: #34d399;
+        }
+
+        .dec-3 {
+            top: 50%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            background: #2dd4bf;
+        }
+
         /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .content-section {
+                padding: 64px 20px;
+            }
+        }
+
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
             }
 
+            .nav-container {
+                padding: 0 16px;
+                height: 64px;
+            }
+
+            .section {
+                padding-top: 64px;
+            }
+
+            .saya-logo {
+                height: 40px;
+            }
+
+            .hapitec-logo {
+                width: 30px;
+                height: 30px;
+            }
+
             .nav-menu {
                 display: none;
                 position: fixed;
-                top: 70px;
+                top: 64px;
                 left: 0;
                 right: 0;
-                background: white;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.98);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
                 flex-direction: column;
                 gap: 0;
-                padding: 16px 0;
+                padding: 8px 0 24px;
                 z-index: 999;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             }
 
             .nav-menu.active {
-                display: block;
+                display: flex;
             }
 
             .nav-menu li {
@@ -698,8 +973,12 @@
 
             .nav-link {
                 display: block;
-                padding: 12px 24px;
+                padding: 14px 24px;
                 border-bottom: 1px solid #e5e7eb;
+            }
+
+            .nav-link.active::after {
+                display: none;
             }
 
             .dropdown {
@@ -719,36 +998,193 @@
                 display: block;
             }
 
-            .decorative {
-                position: absolute;
-                border-radius: 50%;
-                filter: blur(64px);
-                opacity: 0.2;
-                pointer-events: none;
+            .hero {
+                min-height: calc(100dvh - 64px);
+                min-height: calc(100vh - 64px);
+                padding: 48px 16px 32px;
+            }
+
+            .hero-logo {
+                width: clamp(140px, 42vw, 200px);
+            }
+
+            .main-title {
+                letter-spacing: 0.05em;
+            }
+
+            .tagline {
+                margin-bottom: 32px;
+                padding: 0 4px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 40px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                gap: 10px;
+                margin-bottom: 28px;
+            }
+
+            .hero-stat {
+                padding: 12px 8px;
+            }
+
+            .features {
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 24px 20px;
+            }
+
+            .content-section {
+                padding: 48px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .section-header h1 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+
+            .card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .card h2 {
+                flex-wrap: wrap;
+                font-size: 1.15rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 12px;
+            }
+
+            .gallery-item img {
+                height: 140px;
+            }
+
+            .leadership-grid,
+            .awards-grid,
+            .values-grid,
+            .stakeholder-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hapitec-projects .gallery-section h3 {
+                font-size: 1.05rem;
+            }
+
+            footer {
+                padding: 32px 16px 24px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                word-break: break-word;
+            }
+
+            .membership-form button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+
+            .card img {
+                height: auto !important;
             }
 
             .dec-1 {
-                top: 10%;
-                left: 5%;
-                width: 200px;
-                height: 200px;
-                background: #4ade80;
+                width: 120px;
+                height: 120px;
             }
 
             .dec-2 {
-                bottom: 10%;
-                right: 5%;
-                width: 250px;
-                height: 250px;
-                background: #34d399;
+                width: 140px;
+                height: 140px;
             }
 
             .dec-3 {
-                top: 50%;
-                right: 10%;
-                width: 150px;
-                height: 150px;
-                background: #2dd4bf;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                max-width: 220px;
+            }
+
+            .acronym {
+                letter-spacing: 0.15em;
+            }
+
+            .nav-logo {
+                gap: 8px;
+            }
+
+            .saya-logo {
+                height: 36px;
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .feature-card:hover,
+            .card:hover,
+            .leader-card:hover {
+                transform: translateY(-4px);
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @supports (padding: max(0px)) {
+            .navbar {
+                padding-left: max(0px, env(safe-area-inset-left));
+                padding-right: max(0px, env(safe-area-inset-right));
+            }
+
+            footer {
+                padding-bottom: max(24px, env(safe-area-inset-bottom));
             }
         }
 
@@ -804,6 +1240,78 @@
             border: 1px solid #16a34a;
         }
 
+        .partner-logos-cascade {
+            margin-top: 64px;
+            overflow: hidden;
+        }
+
+        .partner-logos-cascade h3 {
+            text-align: center;
+            color: #15803d;
+            margin-bottom: 32px;
+            font-size: 1.5rem;
+        }
+
+        .cascade-row {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+            width: max-content;
+        }
+
+        .cascade-row img {
+            height: 80px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #dcfce7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .cascade-row img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .cascade-row-left {
+            animation: cascadeScrollLeft 30s linear infinite;
+        }
+
+        .cascade-row-right {
+            animation: cascadeScrollRight 35s linear infinite;
+        }
+
+        .partner-logos-cascade:hover .cascade-row {
+            animation-play-state: paused;
+        }
+
+        @keyframes cascadeScrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes cascadeScrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            .cascade-row img {
+                height: 60px;
+                max-width: 150px;
+                padding: 10px 16px;
+            }
+
+            .cascade-row {
+                gap: 20px;
+            }
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -812,17 +1320,18 @@
         }
 
         .stat-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            background: linear-gradient(145deg, #ffffff, #f0fdf4);
             padding: 24px;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             text-align: center;
-            border: 2px solid #16a34a;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(22, 163, 74, 0.15);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .stat-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(22, 163, 74, 0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
         }
 
         .stat-number {
@@ -997,6 +1506,15 @@
             margin-top: 32px;
         }
 
+        .event-gallery .gallery-grid > img,
+        .launch-gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
         .leader-card {
             background: white;
             border-radius: 12px;
@@ -1135,6 +1653,30 @@
             height: 200px;
             object-fit: cover;
             transition: transform 0.3s ease;
+        }
+
+
+        .hapitec-projects .section-header h2 {
+            color: #15803d;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .hapitec-projects .gallery-section {
+            margin-top: 40px;
+        }
+
+        .hapitec-projects .gallery-section h3 {
+            color: #166534;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #bbf7d0;
+            text-align: left;
+        }
+
+        .hapitec-projects .gallery-section .gallery-grid {
+            margin-top: 16px;
         }
 
         .gallery-item:hover img {
@@ -1357,18 +1899,13 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#home">Skip to content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="nav-logo" onclick="navigateTo('home')">
-                <svg class="nav-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M7 20h10"/>
-                    <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
-                    <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
-                    <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
-                </svg>
-                <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="hapitec" class="hapitec-logo">
-                <span class="nav-logo-text">SAYA</span>
+            <div class="nav-logo" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Go to home" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigateTo('home');}">
+                <img src="images/saya-logo.jpeg" alt="SAYA - Sustainable Agricultural Yield Alliance" class="saya-logo">
+                <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment" class="hapitec-logo">
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a class="nav-link active" data-section="home">Home</a></li>
@@ -1379,7 +1916,6 @@
                 <li><a class="nav-link" data-section="stakeholders">Stakeholders</a></li>
                 <li><a class="nav-link" data-section="technology">Technology</a></li>
                 <li><a class="nav-link" data-section="achievements">Achievements</a></li>
-                <li><a class="nav-link" data-section="projects">Projects</a></li>
                 <li class="dropdown">
                     <a class="nav-link">More</a>
                     <div class="dropdown-content">
@@ -1389,7 +1925,7 @@
                 </li>
                 <li><a class="nav-link" data-section="news">News</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"/>
                     <line x1="3" y1="6" x2="21" y2="6"/>
@@ -1407,32 +1943,36 @@
                 <div class="logo-container">
                     <div class="logo-wrapper">
                         <div class="logo-glow"></div>
-                        <div class="logo-circle">
-                            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 20h10"/>
-                                <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
-                                <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
-                                <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
-                            </svg>
-                        </div>
+                        <img src="images/saya-logo.jpeg" alt="SAYA - Sustainable Agricultural Yield Alliance" class="hero-logo">
                     </div>
                 </div>
 
                 <div>
-                    <h1 class="main-title">Sustainable Agriculture Youth Alliance</h1>
-                    <div class="divider-container">
-                        <div class="divider-line"></div>
-                        <span class="acronym">SAYA</span>
-                        <div class="divider-line"></div>
-                    </div>
+                    <h1 class="visually-hidden">Sustainable Agricultural Yield Alliance (SAYA)</h1>
+                    <p class="hero-eyebrow">Sustainable Agricultural Yield Alliance</p>
                 </div>
 
                 <p class="motto">"Growing Leaders. Growing Food. Growing the Future."</p>
 
                 <p class="tagline">
-                    Empowering the next generation of agricultural leaders to cultivate sustainable solutions 
-                    for a thriving planet and prosperous communities
+                    Empowering the next generation of agricultural leaders to cultivate sustainable solutions
+                    for a thriving planet and prosperous communities across Zambia.
                 </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>25+</strong>
+                        <span>Technology Projects</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>12</strong>
+                        <span>Farming Communities</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>1,000+</strong>
+                        <span>Farmers Supported</span>
+                    </div>
+                </div>
 
                 <div class="buttons">
                     <button class="btn btn-primary" onclick="navigateTo('membership')">
@@ -1455,8 +1995,8 @@
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                             </svg>
                         </div>
-                        <h3>Youth-Led</h3>
-                        <p>Driven by passionate young leaders committed to transforming agriculture</p>
+                        <h3>Inclusive & Collaborative</h3>
+                        <p>A diverse collective of people from different backgrounds united to bridge farmers and markets while supporting youth growth, persons with disability, and women</p>
                     </div>
 
                     <div class="feature-card">
@@ -1484,6 +2024,15 @@
                         <p>Building networks across Zambia and beyond for sustainable food systems</p>
                     </div>
                 </div>
+
+                <button type="button" class="scroll-hint" onclick="navigateTo('about')" aria-label="Explore more about SAYA">
+                    <span>Explore</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 5v14"/>
+                        <path d="m19 12-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="decorative dec-1"></div>
         <div class="decorative dec-2"></div>
@@ -1576,7 +2125,7 @@
                     </svg>
                     Our Reach Across Zambia
                 </h2>
-                <p>SAYA was founded in 2025 with plans to expand across all 10 provinces of Zambia over five years, starting with our flagship Chililabombwe Chapter serving the Copperbelt region.</p>
+                <p>SAYA was founded in 2026 with plans to expand across all 10 provinces of Zambia over five years, starting with our flagship Chililabombwe Chapter serving the Copperbelt region.</p>
                 <div class="provinces-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px;">
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Copperbelt Province</h4>
@@ -1584,39 +2133,39 @@
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Northwestern Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2026 - Solwezi, Kasempa</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2027 - Solwezi, Kasempa</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Lusaka Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2027 - Capital region</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2028 - Capital region</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Southern Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2027 - Choma, Livingstone</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2028 - Choma, Livingstone</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Eastern Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2028 - Chipata, Lundazi</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2029 - Chipata, Lundazi</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Northern Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2028 - Kasama, Mpulungu</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2029 - Kasama, Mpulungu</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Luapula Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2028 - Mansa, Samfya</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2029 - Mansa, Samfya</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Central Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2029 - Kabwe, Kapiri Mposhi</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2030 - Kabwe, Kapiri Mposhi</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Western Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2029 - Mongu, Senanga</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2030 - Mongu, Senanga</p>
                     </div>
                     <div class="province-card" style="background: #f0fdf4; padding: 16px; border-radius: 8px; border: 1px solid #dcfce7;">
                         <h4 style="color: #15803d; margin-bottom: 8px;">Muchinga Province</h4>
-                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2030 - Chinsali, Nakonde</p>
+                        <p style="color: #4b5563; font-size: 0.9rem;">Launching 2031 - Chinsali, Nakonde</p>
                     </div>
                 </div>
             </div>
@@ -1647,10 +2196,10 @@
                         <path d="M17 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
                         <path d="M21 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
                     </svg>
-                    Five-Year Strategic Plan (2025-2030)
+                    Five-Year Strategic Plan (2026-2031)
                 </h2>
                 <p>SAYA's comprehensive five-year roadmap outlines our phased expansion and impact strategy across Zambia, starting with our inaugural chapter in Chililabombwe.</p>
-                <h3>Year 1 (2025): Foundation & First Chapter Launch</h3>
+                <h3>Year 1 (2026): Foundation & First Chapter Launch</h3>
                 <ul>
                     <li>Establish Chililabombwe Chapter as our flagship regional hub</li>
                     <li>Cater to youth in Chililabombwe, Kitwe, Chingola, and Kasumbalesa districts</li>
@@ -1658,28 +2207,28 @@
                     <li>Build partnerships with local stakeholders and government entities</li>
                     <li>Achieve 500 youth participants and 10 cooperative establishments</li>
                 </ul>
-                <h3>Year 2 (2026): Expansion & Technology Integration</h3>
+                <h3>Year 2 (2027): Expansion & Technology Integration</h3>
                 <ul>
                     <li>Launch additional chapters in Copperbelt and Northwestern provinces</li>
                     <li>Implement advanced digital platforms and IoT solutions</li>
                     <li>Scale training programs to 2,000 participants</li>
                     <li>Establish 20 youth-led cooperatives with sustainable practices</li>
                 </ul>
-                <h3>Year 3 (2027): National Scaling</h3>
+                <h3>Year 3 (2028): National Scaling</h3>
                 <ul>
                     <li>Expand to Lusaka and Southern provinces</li>
                     <li>Develop comprehensive market linkages and value chain integration</li>
                     <li>Reach 4,000 trained youth and 30 operational cooperatives</li>
                     <li>Launch innovation hubs for agricultural technology development</li>
                 </ul>
-                <h3>Year 4 (2028): Impact Consolidation</h3>
+                <h3>Year 4 (2029): Impact Consolidation</h3>
                 <ul>
                     <li>Cover Eastern, Northern, and Luapula provinces</li>
                     <li>Strengthen international partnerships and funding streams</li>
                     <li>Achieve 7,000 participants and 40 cooperatives</li>
                     <li>Implement large-scale climate-resilient farming programs</li>
                 </ul>
-                <h3>Year 5 (2029-2030): Sustainability & Legacy</h3>
+                <h3>Year 5 (2030-2031): Sustainability & Legacy</h3>
                 <ul>
                     <li>Complete national coverage across all 10 provinces</li>
                     <li>Establish SAYA as a leading youth agricultural movement in Africa</li>
@@ -1732,6 +2281,56 @@
                 </div>
             </div>
 
+            <!-- Awards Section -->
+            <div class="awards-section" style="margin-top: 48px;">
+                <h3>Awards and Recognitions</h3>
+                <p>Industry recognition for Hapitec Investment Limited's excellence in commercial farming, animal welfare, and agricultural innovation.</p>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <a href="images/AGRI-COOP 2025.jpg" target="_blank">
+                            <img src="images/AGRI-COOP 2025.jpg" alt="AGRI-COOP 2025 Award">
+                        </a>
+                        <h4>AGRI-COOP 2025</h4>
+                        <p>Outstanding contribution to cooperative agriculture.</p>
+                    </div>
+                    <div class="award-card">
+                        <a href="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" target="_blank">
+                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP Animal Welfare Award">
+                        </a>
+                        <h4>AGRI-COOP Animal Welfare Award</h4>
+                        <p>Recognition for excellence in animal welfare practices.</p>
+                    </div>
+                    <div class="award-card">
+                        <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
+                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 Best Commercial Pig Farmer">
+                        </a>
+                        <h4>CAMINEX 2025 Best Commercial Pig Farmer</h4>
+                        <p>Award for innovative pig farming techniques.</p>
+                    </div>
+                    <div class="award-card">
+                        <a href="images/CAMINEX 2025.jpg" target="_blank">
+                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
+                        </a>
+                        <h4>CAMINEX 2025</h4>
+                        <p>Excellence in agricultural innovation.</p>
+                    </div>
+                    <div class="award-card">
+                        <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
+                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX Ambassador">
+                        </a>
+                        <h4>CAMINEX Ambassador</h4>
+                        <p>Ambassador for agricultural excellence.</p>
+                    </div>
+                    <div class="award-card">
+                        <a href="images/CERTIFICATE OF APPRECIATION.jpg" target="_blank">
+                            <img src="images/CERTIFICATE OF APPRECIATION.jpg" alt="Certificate of Appreciation">
+                        </a>
+                        <h4>Certificate of Appreciation</h4>
+                        <p>Appreciation for community impact.</p>
+                    </div>
+                </div>
+            </div>
+
                 <div class="card" style="margin-top: 48px;">
                     <h2>
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1750,6 +2349,500 @@
                         <li>Accelerated technology adoption initiatives to empower sustainable agriculture and youth entrepreneurship</li>
                     </ul>
                 </div>
+
+            <!-- Projects Subsection within Hapitec -->
+            <div id="hapitec-projects" class="hapitec-projects" style="margin-top: 48px;">
+                <div class="section-header" style="margin-bottom: 32px;">
+                    <div class="subtitle">Our Work</div>
+                    <h2>Projects</h2>
+                    <p>From commercial pig farming and aquaculture to community outreach and trade exhibitions — explore Hapitec Investment Limited's initiatives driving sustainable agriculture across Zambia.</p>
+                </div>
+                <div class="gallery-section">
+                    <h3>Commercial Pig Farming</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/A gaze into the Pig feeding time.jpg" target="_blank">
+                            <img src="images/A gaze into the Pig feeding time.jpg" alt="A gaze into the Pig feeding time">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Ambassador i the brooder.jpg" target="_blank">
+                            <img src="images/Ambassador i the brooder.jpg" alt="Ambassador i the brooder">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Award winning pigs.jpg" target="_blank">
+                            <img src="images/Award winning pigs.jpg" alt="Award winning pigs">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/pig pens showcase.jpg" target="_blank">
+                            <img src="images/pig pens showcase.jpg" alt="pig pens showcase">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/piglets keeping warm.jpg" target="_blank">
+                            <img src="images/piglets keeping warm.jpg" alt="piglets keeping warm">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/piglets suckling.jpg" target="_blank">
+                            <img src="images/piglets suckling.jpg" alt="piglets suckling">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/PIgs.jpg" target="_blank">
+                            <img src="images/PIgs.jpg" alt="PIgs">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/playtim in the pig pens.jpg" target="_blank">
+                            <img src="images/playtim in the pig pens.jpg" alt="playtim in the pig pens">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Value-Added Products</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Hapitec Borewors.jpg" target="_blank">
+                            <img src="images/Hapitec Borewors.jpg" alt="Hapitec Borewors">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec homemade mince.jpg" target="_blank">
+                            <img src="images/Hapitec homemade mince.jpg" alt="Hapitec homemade mince">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec sausages.jpg" target="_blank">
+                            <img src="images/Hapitec sausages.jpg" alt="Hapitec sausages">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Aquaculture</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Pond construction.jpg" target="_blank">
+                            <img src="images/Pond construction.jpg" alt="Pond construction">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" target="_blank">
+                            <img src="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" alt="LATTICE WYEEFIMA aquaculture project">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" target="_blank">
+                            <img src="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" alt="Youth fish farming empowerment">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" target="_blank">
+                            <img src="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" alt="Tilapia fingerlings distribution">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" target="_blank">
+                            <img src="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" alt="Aquaculture training session">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" target="_blank">
+                            <img src="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" alt="Fish feed support for youth farmers">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Farm Infrastructure</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Ambassador at DAM filling.jpg" target="_blank">
+                            <img src="images/Ambassador at DAM filling.jpg" alt="Ambassador at DAM filling">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Overhead Dam view.jpg" target="_blank">
+                            <img src="images/Overhead Dam view.jpg" alt="Overhead Dam view">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Exhibitions & Trade Shows</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Agric Presnentation.jpg" target="_blank">
+                            <img src="images/Agric Presnentation.jpg" alt="Agric Presnentation">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
+                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 BEST COMMERCIAL PIG FARMER">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX 2025-2.jpg" target="_blank">
+                            <img src="images/CAMINEX 2025-2.jpg" alt="CAMINEX 2025-2">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX 2025.jpg" target="_blank">
+                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
+                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX AMBASSADOR">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX Exhibition.jpg" target="_blank">
+                            <img src="images/CAMINEX Exhibition.jpg" alt="CAMINEX Exhibition">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX FARM MANAGER.jpg" target="_blank">
+                            <img src="images/CAMINEX FARM MANAGER.jpg" alt="CAMINEX FARM MANAGER">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX PIC.jpg" target="_blank">
+                            <img src="images/CAMINEX PIC.jpg" alt="CAMINEX PIC">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX PRESENTATION.jpg" target="_blank">
+                            <img src="images/CAMINEX PRESENTATION.jpg" alt="CAMINEX PRESENTATION">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Caminex Showcase.jpg" target="_blank">
+                            <img src="images/Caminex Showcase.jpg" alt="Caminex Showcase">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX WITH AMBASSADOR.jpg" target="_blank">
+                            <img src="images/CAMINEX WITH AMBASSADOR.jpg" alt="CAMINEX WITH AMBASSADOR">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CAMINEX.jpg" target="_blank">
+                            <img src="images/CAMINEX.jpg" alt="CAMINEX">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Some fun at the exhibition.jpg" target="_blank">
+                            <img src="images/Some fun at the exhibition.jpg" alt="Some fun at the exhibition">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Community & CSR</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Corporate social responsibility towards Menza trust school.jpg" target="_blank">
+                            <img src="images/Corporate social responsibility towards Menza trust school.jpg" alt="Corporate social responsibility towards Menza trust school">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CSR TO KAWAMA.jpg" target="_blank">
+                            <img src="images/CSR TO KAWAMA.jpg" alt="CSR TO KAWAMA">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/CSR towards Eden community school in muchinshi.jpg" target="_blank">
+                            <img src="images/CSR towards Eden community school in muchinshi.jpg" alt="CSR towards Eden community school in muchinshi">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Eden Community.jpg" target="_blank">
+                            <img src="images/Eden Community.jpg" alt="Eden Community">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/EDEN Csr.jpg" target="_blank">
+                            <img src="images/EDEN Csr.jpg" alt="EDEN Csr">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec and Eden Community.jpg" target="_blank">
+                            <img src="images/Hapitec and Eden Community.jpg" alt="Hapitec and Eden Community">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Kawama Secondary CSR.jpg" target="_blank">
+                            <img src="images/Kawama Secondary CSR.jpg" alt="Kawama Secondary CSR">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Kawama Secondary Group Photo.jpg" target="_blank">
+                            <img src="images/Kawama Secondary Group Photo.jpg" alt="Kawama Secondary Group Photo">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Supporting Pad a Girl camoaign.jpg" target="_blank">
+                            <img src="images/Supporting Pad a Girl camoaign.jpg" alt="Supporting Pad a Girl camoaign">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Team & Partnerships</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Executive Director at the office.jpg" target="_blank">
+                            <img src="images/Executive Director at the office.jpg" alt="Executive Director at the office">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Executive director gving a speech.jpg" target="_blank">
+                            <img src="images/Executive director gving a speech.jpg" alt="Executive director gving a speech">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec Partner.jpg" target="_blank">
+                            <img src="images/Hapitec Partner.jpg" alt="Hapitec Partner">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec partners.jpg" target="_blank">
+                            <img src="images/Hapitec partners.jpg" alt="Hapitec partners">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Hapitec team.jpg" target="_blank">
+                            <img src="images/Hapitec team.jpg" alt="Hapitec team">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/Media Presentation at the office.jpg" target="_blank">
+                            <img src="images/Media Presentation at the office.jpg" alt="Media Presentation at the office">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/With Nerbert Sinyengo of Lindern Farms.jpg" target="_blank">
+                            <img src="images/With Nerbert Sinyengo of Lindern Farms.jpg" alt="With Nerbert Sinyengo of Lindern Farms">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Field Activities & Events</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/588501095_857362083901159_1010691211480693600_n.jpg" target="_blank">
+                            <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="588501095 857362083901159 1010691211480693600 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
+                            <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="588549763 1196398269091590 2115167589575362366 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588561217_895814889677900_9094463673862063155_n.jpg" target="_blank">
+                            <img src="images/588561217_895814889677900_9094463673862063155_n.jpg" alt="588561217 895814889677900 9094463673862063155 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588564469_1579630409871766_3862578400457867919_n.jpg" target="_blank">
+                            <img src="images/588564469_1579630409871766_3862578400457867919_n.jpg" alt="588564469 1579630409871766 3862578400457867919 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588585944_2198285420663964_7879311455197086507_n.jpg" target="_blank">
+                            <img src="images/588585944_2198285420663964_7879311455197086507_n.jpg" alt="588585944 2198285420663964 7879311455197086507 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588593833_2172819403128844_5784161658005665280_n.jpg" target="_blank">
+                            <img src="images/588593833_2172819403128844_5784161658005665280_n.jpg" alt="588593833 2172819403128844 5784161658005665280 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588624525_751848100569070_260643845824782112_n.jpg" target="_blank">
+                            <img src="images/588624525_751848100569070_260643845824782112_n.jpg" alt="588624525 751848100569070 260643845824782112 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588629505_1967445287156048_4351662337924002597_n.jpg" target="_blank">
+                            <img src="images/588629505_1967445287156048_4351662337924002597_n.jpg" alt="588629505 1967445287156048 4351662337924002597 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588631183_1160419056293341_1720300538668082460_n.jpg" target="_blank">
+                            <img src="images/588631183_1160419056293341_1720300538668082460_n.jpg" alt="588631183 1160419056293341 1720300538668082460 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588636937_811888124994910_4007262576841294081_n.jpg" target="_blank">
+                            <img src="images/588636937_811888124994910_4007262576841294081_n.jpg" alt="588636937 811888124994910 4007262576841294081 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588649789_1183528929777771_1931132066000995188_n.jpg" target="_blank">
+                            <img src="images/588649789_1183528929777771_1931132066000995188_n.jpg" alt="588649789 1183528929777771 1931132066000995188 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588693881_1402100728201624_2556705451086888556_n.jpg" target="_blank">
+                            <img src="images/588693881_1402100728201624_2556705451086888556_n.jpg" alt="588693881 1402100728201624 2556705451086888556 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588717768_717484414256373_7629925319107726543_n.jpg" target="_blank">
+                            <img src="images/588717768_717484414256373_7629925319107726543_n.jpg" alt="588717768 717484414256373 7629925319107726543 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588729063_1372800214476681_8463775389515691889_n.jpg" target="_blank">
+                            <img src="images/588729063_1372800214476681_8463775389515691889_n.jpg" alt="588729063 1372800214476681 8463775389515691889 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588753451_1896416867608297_4622966955592559002_n.jpg" target="_blank">
+                            <img src="images/588753451_1896416867608297_4622966955592559002_n.jpg" alt="588753451 1896416867608297 4622966955592559002 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588803005_1264955688727266_6917099144595292252_n.jpg" target="_blank">
+                            <img src="images/588803005_1264955688727266_6917099144595292252_n.jpg" alt="588803005 1264955688727266 6917099144595292252 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588913425_1738414483484749_1928041514493014160_n.jpg" target="_blank">
+                            <img src="images/588913425_1738414483484749_1928041514493014160_n.jpg" alt="588913425 1738414483484749 1928041514493014160 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/588943135_867550349143348_8833649457481055207_n.jpg" target="_blank">
+                            <img src="images/588943135_867550349143348_8833649457481055207_n.jpg" alt="588943135 867550349143348 8833649457481055207 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589030581_3246139785542935_8786054256582856851_n.jpg" target="_blank">
+                            <img src="images/589030581_3246139785542935_8786054256582856851_n.jpg" alt="589030581 3246139785542935 8786054256582856851 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589112296_32653753550936164_1437035004795656955_n.jpg" target="_blank">
+                            <img src="images/589112296_32653753550936164_1437035004795656955_n.jpg" alt="589112296 32653753550936164 1437035004795656955 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589135126_1503327747564373_2235345761174011299_n.jpg" target="_blank">
+                            <img src="images/589135126_1503327747564373_2235345761174011299_n.jpg" alt="589135126 1503327747564373 2235345761174011299 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589357597_1571997870463903_3342631274116178312_n.jpg" target="_blank">
+                            <img src="images/589357597_1571997870463903_3342631274116178312_n.jpg" alt="589357597 1571997870463903 3342631274116178312 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589512374_1360357899006579_7632220051076540314_n.jpg" target="_blank">
+                            <img src="images/589512374_1360357899006579_7632220051076540314_n.jpg" alt="589512374 1360357899006579 7632220051076540314 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589601014_1678803926425406_4626883336498603813_n.jpg" target="_blank">
+                            <img src="images/589601014_1678803926425406_4626883336498603813_n.jpg" alt="589601014 1678803926425406 4626883336498603813 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589601017_1548804489870561_1224683824387757297_n.jpg" target="_blank">
+                            <img src="images/589601017_1548804489870561_1224683824387757297_n.jpg" alt="589601017 1548804489870561 1224683824387757297 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589648935_1520874759189708_3486635347694883895_n.jpg" target="_blank">
+                            <img src="images/589648935_1520874759189708_3486635347694883895_n.jpg" alt="589648935 1520874759189708 3486635347694883895 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589680389_2332614417180195_6581391081636964411_n.jpg" target="_blank">
+                            <img src="images/589680389_2332614417180195_6581391081636964411_n.jpg" alt="589680389 2332614417180195 6581391081636964411 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589762550_703735295717330_8074637352672693494_n.jpg" target="_blank">
+                            <img src="images/589762550_703735295717330_8074637352672693494_n.jpg" alt="589762550 703735295717330 8074637352672693494 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589817778_1230984075577781_8120458165682451210_n.jpg" target="_blank">
+                            <img src="images/589817778_1230984075577781_8120458165682451210_n.jpg" alt="589817778 1230984075577781 8120458165682451210 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/589924530_1154543286388377_2882200838152448980_n.jpg" target="_blank">
+                            <img src="images/589924530_1154543286388377_2882200838152448980_n.jpg" alt="589924530 1154543286388377 2882200838152448980 n">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/On the zambia must win walk with Dumisani Ncube.jpg" target="_blank">
+                            <img src="images/On the zambia must win walk with Dumisani Ncube.jpg" alt="On the zambia must win walk with Dumisani Ncube">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" target="_blank">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM (1)">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" target="_blank">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" target="_blank">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (1)">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" target="_blank">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (2)">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" target="_blank">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>Farm Operations</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/Ambasador fun.jpg" target="_blank">
+                            <img src="images/Ambasador fun.jpg" alt="Ambasador fun">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="images/HAPITEC Farms.jpg" target="_blank">
+                            <img src="images/HAPITEC Farms.jpg" alt="HAPITEC Farms">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3>SAYA Collaboration</h3>
+                    <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <a href="images/SAYA brochure.png" target="_blank">
+                            <img src="images/SAYA brochure.png" alt="SAYA promotional brochure">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1887,64 +2980,80 @@
                         <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
-                    Leadership Team
+                    Board of Directors
                 </h2>
-                <p>Meet our dedicated leaders who drive SAYA's vision and mission forward.</p>
+                <p>Farmers, educators, industry partners, and SAYA leaders guiding the alliance's strategic direction.</p>
                 <div class="leadership-grid">
-                <div class="leader-card">
-                    <img src="images/Executive Director at the office.jpg" alt="Happy Mulobeka" class="leader-image">
-                    <h4>Happy Mulobeka</h4>
-                    <p class="leader-position">Executive Director</p>
-                    <p class="leader-description">As a dedicated farmer and visionary leader, Happy oversees SAYA's strategic direction and overall operations. With extensive experience in sustainable agriculture, he drives initiatives that promote food security, environmental stewardship, and economic empowerment for youth across Zambia. His hands-on farming background and commitment to community development make him instrumental in building partnerships and achieving SAYA's mission of transforming agriculture through innovation and collaboration.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Prudence Kambafwile">PK</div>
-                    <h4>Prudence Kambafwile</h4>
-                    <p class="leader-position">Chief Operating Officer</p>
-                    <p class="leader-description">Prudence oversees day-to-day operations, program delivery, and internal coordination so SAYA's initiatives run efficiently and align with our strategic goals. She strengthens processes, supports teams in the field, and helps turn policy into practical outcomes for youth and farming communities.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Japhet Banda">JB</div>
-                    <h4>Japhet Banda</h4>
-                    <p class="leader-position">Chief Financial Officer</p>
-                    <p class="leader-description">Japhet leads financial planning, budgeting, and reporting for SAYA, ensuring resources are stewarded transparently and directed toward maximum impact. He supports sustainable growth, compliance, and clear communication with partners and stakeholders on financial performance.</p>
-                </div>
-                <div class="leader-card">
-                    <img src="images/Media Presentation at the office.jpg" alt="Dominic Tembo" class="leader-image">
-                    <h4>Dominic Tembo</h4>
-                    <p class="leader-position">Chief Technology Officer</p>
-                    <p class="leader-description">Dominic leads the integration of cutting-edge technologies into SAYA's agricultural initiatives. He collaborates closely with partners like Hapitec to develop and implement digital solutions, including mobile apps for real-time farming support, IoT sensors for precision agriculture, and data analytics platforms. His expertise in technology adoption helps bridge the gap between traditional farming practices and modern innovations, enabling youth farmers to optimize yields, reduce costs, and promote sustainable practices across Zambia.</p>
-                </div>
-                <div class="leader-card">
-                    <img src="images/Executive director gving a speech.jpg" alt="Musaka Musungu" class="leader-image">
-                    <h4>Musaka Musungu</h4>
-                    <p class="leader-position">Programs Officer</p>
-                    <p class="leader-description">Musaka is responsible for designing, implementing, and managing SAYA's youth-led agricultural programs. He coordinates training workshops, community outreach initiatives, and partnership development to ensure impactful results. With a focus on empowering young farmers, Musaka works to create sustainable agricultural cooperatives, facilitate knowledge sharing, and build resilient farming communities throughout Zambia's provinces, contributing directly to food security and youth employment goals.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Clement Longwani">CL</div>
-                    <h4>Clement Longwani</h4>
-                    <p class="leader-position">Expert</p>
-                    <p class="leader-description">Clement contributes specialized technical knowledge to SAYA's programs, supporting quality delivery of training, field practices, and innovation adoption. He helps ensure interventions are grounded in evidence and tailored to real conditions on the ground.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Mapalo Manda">MM</div>
-                    <h4>Mapalo Manda</h4>
-                    <p class="leader-position">Expert</p>
-                    <p class="leader-description">Mapalo supports SAYA as an expert advisor, strengthening program design and implementation with hands-on insight. He works alongside teams and partners to improve outcomes for youth farmers and agricultural enterprises.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Melinda Chikumbi">MC</div>
-                    <h4>Melinda Chikumbi</h4>
-                    <p class="leader-position">Leadership Team</p>
-                    <p class="leader-description">Melinda supports SAYA's leadership and programs, contributing to coordination, community engagement, and the organization's mission across initiatives that empower young people in agriculture.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Lupele Fhebian">LF</div>
-                    <h4>Lupele Fhebian</h4>
-                    <p class="leader-position">Leadership Team</p>
-                    <p class="leader-description">Lupele contributes to SAYA's strategic and operational work as part of the leadership team, helping advance our vision for sustainable agriculture and youth opportunity in Zambia.</p>
-                </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Michael Mwelwa.jpg" alt="Michael Mwelwa" class="leader-image">
+                        <h4>Michael Mwelwa</h4>
+                        <p class="leader-position">MACMEL Poultry Production</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Felix Chambuleni.jpg" alt="Felix Chambuleni" class="leader-image">
+                        <h4>Felix Chambuleni</h4>
+                        <p class="leader-position">Pig Farmer / Teacher</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Alfonso Ngwezi.jpeg" alt="Alfonso Ngwezi" class="leader-image">
+                        <h4>Alfonso Ngwezi</h4>
+                        <p class="leader-position">Ngwezi Farm</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/prince ngwezi.PNG" alt="Prince Ngwezi" class="leader-image">
+                        <h4>Prince Ngwezi</h4>
+                        <p class="leader-position">Ngwezi Farm</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Given Katakwe.jpg" alt="Given Katakwe" class="leader-image">
+                        <h4>Given Katakwe</h4>
+                        <p class="leader-position">SAYA Offtake &amp; Registration Lead</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Happy Mulobeka.jpg" alt="Happy Mulobeka" class="leader-image">
+                        <h4>Happy Mulobeka</h4>
+                        <p class="leader-position">SAYA Chairperson</p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Matthews Mwansa">MM</div>
+                        <h4>Matthews Mwansa</h4>
+                        <p class="leader-position">Poultry Farmer</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Prudence Kambafwile.jpg" alt="Prudence Kambafwile" class="leader-image">
+                        <h4>Prudence Kambafwile</h4>
+                        <p class="leader-position">Hapitec Investment / Kamby Liquor</p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Musenge Chilwana">MC</div>
+                        <h4>Musenge Chilwana</h4>
+                        <p class="leader-position">Salesman / Teacher</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Maxwell Simuchimba.jpg" alt="Maxwell Simuchimba" class="leader-image">
+                        <h4>Maxwell Simuchimba</h4>
+                        <p class="leader-position">MOA / Bmanji General</p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Angel Liswili">AL</div>
+                        <h4>Angel Liswili</h4>
+                        <p class="leader-position">Expert</p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Garry Chumbila">GC</div>
+                        <h4>Garry Chumbila</h4>
+                        <p class="leader-position">Finance</p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-image leader-avatar-placeholder" role="img" aria-label="Vincent Chimanga">VC</div>
+                        <h4>Vincent Chimanga</h4>
+                        <p class="leader-position">Luwi Farm</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="leadership team/Dominic Tembo.jpg" alt="Dominic Tembo" class="leader-image">
+                        <h4>Dominic Tembo</h4>
+                        <p class="leader-position">SAYA IT Officer</p>
+                    </div>
                 </div>
             </div>
 
@@ -2064,6 +3173,30 @@
                     </div>
                 </div>
             </div>
+
+            <div class="partner-logos-cascade">
+                <h3>Our Valued Partners</h3>
+                <div class="cascade-row cascade-row-left">
+                    <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
+                    <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
+                    <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                    <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
+                    <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
+                    <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                </div>
+                <div class="cascade-row cascade-row-right">
+                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                    <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
+                    <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
+                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                    <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
+                    <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2130,16 +3263,15 @@
     <section id="achievements" class="section content-section">
         <div class="section-container">
             <div class="section-header">
-                <div class="subtitle">Our Impact</div>
-                <h1>Achievements</h1>
-                <p>Quantifying our success in advancing sustainable agriculture and empowering the next generation of youth leaders.</p>
+                <div class="subtitle">Our Vision</div>
+                <h1>Achievements &amp; Goals</h1>
+                <p>Current impact through our Hapitec partnership, and SAYA's five-year roadmap for nationwide growth.</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-box">
                     <div class="stat-number">2,500+</div>
-                    <div class="stat-label">Youth Training expected
-                    </div>
+                    <div class="stat-label">Youth Training Goal (5 yrs)</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">50+</div>
@@ -2158,7 +3290,7 @@
             <div class="timeline">
 
                 <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
+                    <div class="timeline-date">2029</div>
                     <div class="timeline-content">
                         <h4>Foundation & First Chapter Launch</h4>
                         <p>Established Chililabombwe Chapter as our flagship regional hub, catering to youth in Chililabombwe, Kitwe, Chingola, and Kasumbalesa districts. Launched initial training programs and built partnerships with local stakeholders.</p>
@@ -2186,7 +3318,7 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2029-2030</div>
+                    <div class="timeline-date">2030-2031</div>
                     <div class="timeline-content">
                         <h4>Sustainability & Legacy</h4>
                         <p>Completed national coverage across all 10 provinces. Established SAYA as a leading youth agricultural movement in Africa, reaching 10,000+ empowered youth and 50+ thriving cooperatives, with self-sustaining business models and knowledge transfer systems.</p>
@@ -2233,56 +3365,6 @@
                 <p>Successfully reduced chemical pesticide use by 40% by promoting organic and sustainable farming methods across partner communities.</p>
                 </div>
             </div>
-
-            <!-- Awards Section -->
-            <div class="awards-section">
-                <h3>Awards and Recognitions</h3>
-                <p>Celebrating SAYA's prestigious awards and notable achievements in advancing sustainable agriculture and youth empowerment in Zambia.</p>
-                <div class="awards-grid">
-                    <div class="award-card">
-                        <a href="images/AGRI-COOP 2025.jpg" target="_blank">
-                            <img src="images/AGRI-COOP 2025.jpg" alt="AGRI-COOP 2025 Award">
-                        </a>
-                        <h4>AGRI-COOP 2025</h4>
-                        <p>Outstanding contribution to cooperative agriculture.</p>
-                    </div>
-                    <div class="award-card">
-                        <a href="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" target="_blank">
-                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP Animal Welfare Award">
-                        </a>
-                        <h4>AGRI-COOP Animal Welfare Award</h4>
-                        <p>Recognition for excellence in animal welfare practices.</p>
-                    </div>
-                    <div class="award-card">
-                        <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 Best Commercial Pig Farmer">
-                        </a>
-                        <h4>CAMINEX 2025 Best Commercial Pig Farmer</h4>
-                        <p>Award for innovative pig farming techniques.</p>
-                    </div>
-                    <div class="award-card">
-                        <a href="images/CAMINEX 2025.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
-                        </a>
-                        <h4>CAMINEX 2025</h4>
-                        <p>Excellence in agricultural innovation.</p>
-                    </div>
-                    <div class="award-card">
-                        <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX Ambassador">
-                        </a>
-                        <h4>CAMINEX Ambassador</h4>
-                        <p>Ambassador for agricultural excellence.</p>
-                    </div>
-                    <div class="award-card">
-                        <a href="images/CERTIFICATE OF APPRECIATION.jpg" target="_blank">
-                            <img src="images/CERTIFICATE OF APPRECIATION.jpg" alt="Certificate of Appreciation">
-                        </a>
-                        <h4>Certificate of Appreciation</h4>
-                        <p>Appreciation for community impact.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     
@@ -2290,7 +3372,7 @@
     <section id="events" class="section content-section">
         <div class="section-container">
             <div class="section-header">
-                <div class="subtitle">Upcoming Events</div>
+                <div class="subtitle">Events & Milestones</div>
                 <h1>Events</h1>
                 <p>Join us for exciting events and workshops that advance sustainable agriculture.</p>
             </div>
@@ -2303,11 +3385,151 @@
                         <line x1="8" y1="2" x2="8" y2="6"/>
                         <line x1="3" y1="10" x2="21" y2="10"/>
                     </svg>
-                    SAYA Launch Event
+                    SAYA Movement Launch - History Was Made!
                 </h2>
-                <p><strong>Date:</strong> To be announced</p>
-                <p>Join us for the official launch of the Sustainable Agriculture Youth Alliance (SAYA). This event will bring together youth leaders, farmers, stakeholders, and partners to celebrate the beginning of our mission to transform agriculture in Zambia.</p>
-                <p><a href="#" class="btn btn-primary">Register Interest</a></p>
+                <p><strong>Date:</strong> Saturday, 13th April 2026</p>
+                <p><strong>Location:</strong> Kumapiri Hotel</p>
+                <p style="font-weight: bold; font-size: 1.1em; margin: 15px 0; color: #2d5016;">History was made.</p>
+                <p>We officially launched the <strong>SAYA Movement</strong> - a family of young farmers, innovators, entrepreneurs & professionals coming together with one vision: to bridge the gap between farmers and the market, supporting youth growth, persons with disability, and women across Zambia.</p>
+                <p>This momentous event brought together our diverse collective of stakeholders, partners, and community members to celebrate the beginning of our transformative journey in sustainable agriculture.</p>
+            </div>
+
+            <div class="event-gallery">
+                <h3>Launch Event Gallery</h3>
+                <div class="gallery-grid">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0213(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0279.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0326(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0326.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0327(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0327.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0328.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0329.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0330.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0331.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0332.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0333.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0334.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0335.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0336.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0337.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0338.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0339(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0339.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0340.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0341.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0342.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0343.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0344.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0345.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0346(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0346.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0347.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0348.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0349.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0350.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0351(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0351.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0352.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0353.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0354(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0354.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0355(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0355.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0356.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0357.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0358(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0358.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0359.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0360.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0361.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0362.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0363.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0364(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0364.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0365.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0366.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0367.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0368(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0368.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0369.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0370.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0371(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0371.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0372.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0373(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0373.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0374.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0375(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0375.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0376.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0377.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0378(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0378.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0379.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0380.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0381(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0381.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0382.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0383.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0384.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0385.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0386.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0387.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0388.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0389.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0390.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0391.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0392.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0393.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0394.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0395.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0396.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0397.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0398.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0399.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0400.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0401.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0402.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0403.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0404.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0405.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0406.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0407.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0408.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0409.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0410.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0411(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0411.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0412.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0413.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0414.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0415.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0416.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0417.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0418.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0419.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0420.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0421.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0422.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0423.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0424.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0425.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0426.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0427.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0428.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0429.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0430.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0431.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0432.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0433(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0433.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0434.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0435.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0436.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0437.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0438.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                </div>
             </div>
         </div>
     </section>
@@ -2323,7 +3545,7 @@
 
             <div class="card">
                 <h2>What is SAYA?</h2>
-                <p>SAYA stands for Sustainable Agriculture Youth Alliance. We are a youth-led organization dedicated to transforming agriculture in Zambia through innovative programs and technology partnerships.</p>
+                <p>SAYA stands for Sustainable Agricultural Yield Alliance. We are a diverse collective of individuals and organizations dedicated to transforming agriculture in Zambia by bridging the gap between farmers and markets, while supporting youth growth, persons with disability, and women through innovative programs and technology partnerships.</p>
             </div>
 
             <div class="card">
@@ -2333,7 +3555,7 @@
 
             <div class="card">
                 <h2>What are SAYA's main goals?</h2>
-                <p>Our goals include empowering 10,000 youth in sustainable agriculture by 2030, establishing youth-led cooperatives, and implementing technology-driven solutions across Zambia.</p>
+                <p>Our goals include empowering 10,000 youth in sustainable agriculture by 2030, establishing inclusive cooperatives that bring together farmers and market stakeholders, and implementing technology-driven solutions across Zambia.</p>
             </div>
 
             <div class="card">
@@ -2359,7 +3581,7 @@
 
             <div class="card">
                 <a href="images/hapitec-youth-day-edena-school-chingola.png" target="_blank">
-                    <img src="images/hapitec-youth-day-edena-school-chingola.png" alt="Pupils and Hapitec representative at Edena Community School, Chingola, beside the Ministry of Education school sign" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/hapitec-youth-day-edena-school-chingola.png" alt="Pupils and Hapitec representative at Edena Community School, Chingola, beside the Ministry of Education school sign" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2369,10 +3591,10 @@
                         <line x1="16" y1="17" x2="8" y2="17"/>
                         <polyline points="10,9 9,9 8,9"/>
                     </svg>
-                    Happy Youth Day from Hapitec Investments LTD
+                    Happy Youth Day from Hapitec Investment Limited
                 </h2>
                 <p><strong>Date:</strong> March 12, 2026</p>
-                <p>Today we celebrate the energy, potential, and dreams of young people. At Hapitec Investments LTD, we believe that the future is built by preparing our youth today. By exposing young minds to agriculture, responsibility, and entrepreneurship early in life, we plant seeds for a stronger and more sustainable tomorrow.</p>
+                <p>Today we celebrate the energy, potential, and dreams of young people. At Hapitec Investment Limited, we believe that the future is built by preparing our youth today. By exposing young minds to agriculture, responsibility, and entrepreneurship early in life, we plant seeds for a stronger and more sustainable tomorrow.</p>
                 <p>Every child has the potential to grow into a leader, innovator, and provider for their community. Let us continue to guide, inspire, and empower the next generation to believe in their abilities and work toward a better future.</p>
                 <blockquote style="margin:16px 0; padding-left:16px; border-left:4px solid #22c55e; color:#374151; font-style:italic;">
                     “The youth of today are the leaders of tomorrow.” — Nelson Mandela
@@ -2384,7 +3606,7 @@
 
             <div class="card">
                 <a href="images/rotary-charter-certificate-presentation.png" target="_blank">
-                    <img src="images/rotary-charter-certificate-presentation.png" alt="Charter certificate presented to Mr. Happy Mwewa Molobeka at Rotary Club of Chililabombwe Metro Charter Night" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/rotary-charter-certificate-presentation.png" alt="Charter certificate presented to Mr. Happy Mwewa Molobeka at Rotary Club of Chililabombwe Metro Charter Night" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2438,7 +3660,7 @@
 
             <div class="card">
                 <a href="images/breeding-upgrade-delivery-from-linden-farm.png" target="_blank">
-                    <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Delivery of improved pig genetics with pickup transporting animals to the farm" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Delivery of improved pig genetics with pickup transporting animals to the farm" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2504,7 +3726,7 @@
 
             <div class="card">
                 <a href="images/657569126_1631829771997555_aquaculture-harvest.jpg" target="_blank">
-                    <img src="images/657569126_1631829771997555_aquaculture-harvest.jpg" alt="Harvested tilapia recovered after pond incident" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/657569126_1631829771997555_aquaculture-harvest.jpg" alt="Harvested tilapia recovered after pond incident" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2547,7 +3769,7 @@
 
             <div class="card">
                 <a href="images/Pond construction.jpg" target="_blank">
-                    <img src="images/Pond construction.jpg" alt="Aquaculture empowerment event with LATICE and Farm Feed visitors" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/Pond construction.jpg" alt="Aquaculture empowerment event with LATICE and Farm Feed visitors" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2560,49 +3782,14 @@
                     Major Visitors Advance Aquaculture Youth Empowerment
                 </h2>
                 <p><strong>Date:</strong> December 17, 2025</p>
-                <p>Yesterday, we had the rare privilege of receiving major visitors in the area of agriculture feed supply and aquaculture youth empowerment. Our first visitor was the LATICE PROJECT COORDINATOR, Mr. Francis, who came to fulfill the WYEEFIMA PROJECT commitment by providing 3,000 Tilapia fingerlings and 28 bags of fish feed to 20 youths through HAPITEC INVESTMENTS LTD and its directors.</p>
-                <p>This initiative is entirely facilitated by LATTICE under a project called WYEEFIMA, which aims to empower women, youths, people with disabilities, and other fish traders. It also aims to expand market access, linkages, and financial access in fish farming and trade. The empowerment through HAPITEC INVESTMENTS LTD is led by our Director of Administration, Mrs. Prudence Molobeka.</p>
+                <p>Yesterday, we had the rare privilege of receiving major visitors in the area of agriculture feed supply and aquaculture youth empowerment. Our first visitor was the LATICE PROJECT COORDINATOR, Mr. Francis, who came to fulfill the WYEEFIMA PROJECT commitment by providing 3,000 Tilapia fingerlings and 28 bags of fish feed to 20 youths through Hapitec Investment Limited and its directors.</p>
+                <p>This initiative is entirely facilitated by LATTICE under a project called WYEEFIMA, which aims to empower women, youths, people with disabilities, and other fish traders. It also aims to expand market access, linkages, and financial access in fish farming and trade. The empowerment through Hapitec Investment Limited is led by our Director of Administration, Mrs. Prudence Molobeka.</p>
                 <p>Our second visitor was the Farm Feed technical experts. It was a very progressive discussion and coaching, which the team will not take lightly, but as a major contribution to the sustainability and going concern of our business. We also anticipate a lot of positive changes, as both our primary focus is on achieving a good yield that brings revenue to both our businesses and ensures customer satisfaction.</p>
             </div>
 
             <div class="card">
-                <a href="images/588501095_857362083901159_1010691211480693600_n.jpg" target="_blank">
-                    <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="SAYA Launch Event" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
-                </a>
-                <h2>
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14,2 14,8 20,8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10,9 9,9 8,9"/>
-                    </svg>
-                    SAYA Launches Flagship Chapter in Chililabombwe
-                </h2>
-                <p><strong>Date:</strong> January 15, 2025</p>
-                <p>SAYA has officially launched its flagship chapter in Chililabombwe, marking the beginning of our five-year expansion plan across Zambia. The launch event brought together over 200 youth leaders, farmers, and stakeholders to celebrate this milestone in sustainable agriculture development.</p>
-                <p>The chapter will serve as a hub for training programs, technology adoption, and community outreach initiatives in the Copperbelt region.</p>
-            </div>
-
-            <div class="card">
-                <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="SAYA-Hapitec Partnership" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
-                <h2>
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                    Partnership with Hapitec Strengthens Technology Integration
-                </h2>
-                <p><strong>Date:</strong> February 3, 2025</p>
-                <p>SAYA and Hapitec Investment Limited have formalized their strategic partnership, combining SAYA's youth-led initiatives with Hapitec's cutting-edge agricultural technology solutions. This collaboration will accelerate the adoption of digital tools across Zambian farming communities.</p>
-                <p>The partnership includes joint development of mobile applications, IoT sensor networks, and data analytics platforms to support precision agriculture and sustainable farming practices.</p>
-            </div>
-
-            <div class="card">
                 <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
-                    <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="Youth Agricultural Leadership Program" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+                    <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="Youth Agricultural Leadership Program" class="news-card-img">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2615,840 +3802,21 @@
                 <p>The program, supported by the Ministry of Agriculture, aims to equip participants with the knowledge and tools needed to establish successful agricultural cooperatives and contribute to Zambia's food security goals.</p>
             </div>
 
-            <!-- Lattice Images Gallery -->
-            <div class="gallery-section">
-                <h2>Lattice Images</h2>
-                <p>Additional project images showcasing our lattice structures and agricultural innovations.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <a href="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" target="_blank">
-                            <img src="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" alt="Lattice Image 1">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" target="_blank">
-                            <img src="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" alt="Lattice Image 2">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" target="_blank">
-                            <img src="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" alt="Lattice Image 3">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" target="_blank">
-                            <img src="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" alt="Lattice Image 4">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" target="_blank">
-                            <img src="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" alt="Lattice Image 5">
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section content-section">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="subtitle">Our Work</div>
-                <h1>Projects</h1>
-                <p>Discover our ongoing initiatives and completed projects in sustainable agriculture.</p>
-            </div>
-
-            <!-- Gallery Section -->
-            <div class="gallery-section">
-                <h2>Project Gallery</h2>
-                <p>Explore images from our various agricultural projects and community initiatives.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <a href="images/588501095_857362083901159_1010691211480693600_n.jpg" target="_blank">
-                            <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="588501095_857362083901159_1010691211480693600_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
-                            <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="588549763_1196398269091590_2115167589575362366_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588561217_895814889677900_9094463673862063155_n.jpg" target="_blank">
-                            <img src="images/588561217_895814889677900_9094463673862063155_n.jpg" alt="588561217_895814889677900_9094463673862063155_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588564469_1579630409871766_3862578400457867919_n.jpg" target="_blank">
-                            <img src="images/588564469_1579630409871766_3862578400457867919_n.jpg" alt="588564469_1579630409871766_3862578400457867919_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588585944_2198285420663964_7879311455197086507_n.jpg" target="_blank">
-                            <img src="images/588585944_2198285420663964_7879311455197086507_n.jpg" alt="588585944_2198285420663964_7879311455197086507_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588593833_2172819403128844_5784161658005665280_n.jpg" target="_blank">
-                            <img src="images/588593833_2172819403128844_5784161658005665280_n.jpg" alt="588593833_2172819403128844_5784161658005665280_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588624525_751848100569070_260643845824782112_n.jpg" target="_blank">
-                            <img src="images/588624525_751848100569070_260643845824782112_n.jpg" alt="588624525_751848100569070_260643845824782112_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588629505_1967445287156048_4351662337924002597_n.jpg" target="_blank">
-                            <img src="images/588629505_1967445287156048_4351662337924002597_n.jpg" alt="588629505_1967445287156048_4351662337924002597_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588631183_1160419056293341_1720300538668082460_n.jpg" target="_blank">
-                            <img src="images/588631183_1160419056293341_1720300538668082460_n.jpg" alt="588631183_1160419056293341_1720300538668082460_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588636937_811888124994910_4007262576841294081_n.jpg" target="_blank">
-                            <img src="images/588636937_811888124994910_4007262576841294081_n.jpg" alt="588636937_811888124994910_4007262576841294081_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588649789_1183528929777771_1931132066000995188_n.jpg" target="_blank">
-                            <img src="images/588649789_1183528929777771_1931132066000995188_n.jpg" alt="588649789_1183528929777771_1931132066000995188_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588693881_1402100728201624_2556705451086888556_n.jpg" target="_blank">
-                            <img src="images/588693881_1402100728201624_2556705451086888556_n.jpg" alt="588693881_1402100728201624_2556705451086888556_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588717768_717484414256373_7629925319107726543_n.jpg" target="_blank">
-                            <img src="images/588717768_717484414256373_7629925319107726543_n.jpg" alt="588717768_717484414256373_7629925319107726543_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588729063_1372800214476681_8463775389515691889_n.jpg" target="_blank">
-                            <img src="images/588729063_1372800214476681_8463775389515691889_n.jpg" alt="588729063_1372800214476681_8463775389515691889_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588753451_1896416867608297_4622966955592559002_n.jpg" target="_blank">
-                            <img src="images/588753451_1896416867608297_4622966955592559002_n.jpg" alt="588753451_1896416867608297_4622966955592559002_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588803005_1264955688727266_6917099144595292252_n.jpg" target="_blank">
-                            <img src="images/588803005_1264955688727266_6917099144595292252_n.jpg" alt="588803005_1264955688727266_6917099144595292252_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588913425_1738414483484749_1928041514493014160_n.jpg" target="_blank">
-                            <img src="images/588913425_1738414483484749_1928041514493014160_n.jpg" alt="588913425_1738414483484749_1928041514493014160_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588943135_867550349143348_8833649457481055207_n.jpg" target="_blank">
-                            <img src="images/588943135_867550349143348_8833649457481055207_n.jpg" alt="588943135_867550349143348_8833649457481055207_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589030581_3246139785542935_8786054256582856851_n.jpg" target="_blank">
-                            <img src="images/589030581_3246139785542935_8786054256582856851_n.jpg" alt="589030581_3246139785542935_8786054256582856851_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589112296_32653753550936164_1437035004795656955_n.jpg" target="_blank">
-                            <img src="images/589112296_32653753550936164_1437035004795656955_n.jpg" alt="589112296_32653753550936164_1437035004795656955_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589135126_1503327747564373_2235345761174011299_n.jpg" target="_blank">
-                            <img src="images/589135126_1503327747564373_2235345761174011299_n.jpg" alt="589135126_1503327747564373_2235345761174011299_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589357597_1571997870463903_3342631274116178312_n.jpg" target="_blank">
-                            <img src="images/589357597_1571997870463903_3342631274116178312_n.jpg" alt="589357597_1571997870463903_3342631274116178312_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589512374_1360357899006579_7632220051076540314_n.jpg" target="_blank">
-                            <img src="images/589512374_1360357899006579_7632220051076540314_n.jpg" alt="589512374_1360357899006579_7632220051076540314_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589601014_1678803926425406_4626883336498603813_n.jpg" target="_blank">
-                            <img src="images/589601014_1678803926425406_4626883336498603813_n.jpg" alt="589601014_1678803926425406_4626883336498603813_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589601017_1548804489870561_1224683824387757297_n.jpg" target="_blank">
-                            <img src="images/589601017_1548804489870561_1224683824387757297_n.jpg" alt="589601017_1548804489870561_1224683824387757297_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589648935_1520874759189708_3486635347694883895_n.jpg" target="_blank">
-                            <img src="images/589648935_1520874759189708_3486635347694883895_n.jpg" alt="589648935_1520874759189708_3486635347694883895_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589680389_2332614417180195_6581391081636964411_n.jpg" target="_blank">
-                            <img src="images/589680389_2332614417180195_6581391081636964411_n.jpg" alt="589680389_2332614417180195_6581391081636964411_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589762550_703735295717330_8074637352672693494_n.jpg" target="_blank">
-                            <img src="images/589762550_703735295717330_8074637352672693494_n.jpg" alt="589762550_703735295717330_8074637352672693494_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589817778_1230984075577781_8120458165682451210_n.jpg" target="_blank">
-                            <img src="images/589817778_1230984075577781_8120458165682451210_n.jpg" alt="589817778_1230984075577781_8120458165682451210_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589924530_1154543286388377_2882200838152448980_n.jpg" target="_blank">
-                            <img src="images/589924530_1154543286388377_2882200838152448980_n.jpg" alt="589924530_1154543286388377_2882200838152448980_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/A gaze into the Pig feeding time.jpg" target="_blank">
-                            <img src="images/A gaze into the Pig feeding time.jpg" alt="A gaze into the Pig feeding time">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Agri Coop showcase.jpg" target="_blank">
-                            <img src="images/Agri Coop showcase.jpg" alt="Agri Coop showcase">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/AGRI-COOP 2025.jpg" target="_blank">
-                            <img src="images/AGRI-COOP 2025.jpg" alt="AGRI-COOP 2025">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" target="_blank">
-                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP ANIMAL WELFARE AWARD">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Agric Presnentation.jpg" target="_blank">
-                            <img src="images/Agric Presnentation.jpg" alt="Agric Presnentation">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambasador fun.jpg" target="_blank">
-                            <img src="images/Ambasador fun.jpg" alt="Ambasador fun">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambassador at DAM filling.jpg" target="_blank">
-                            <img src="images/Ambassador at DAM filling.jpg" alt="Ambassador at DAM filling">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambassador i the brooder.jpg" target="_blank">
-                            <img src="images/Ambassador i the brooder.jpg" alt="Ambassador i the brooder">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Award winning pigs.jpg" target="_blank">
-                            <img src="images/Award winning pigs.jpg" alt="Award winning pigs">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 BEST COMMERCIAL PIG FARMER">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX 2025-2.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025-2.jpg" alt="CAMINEX 2025-2">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX 2025.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX AMBASSADOR">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX Exhibition.jpg" target="_blank">
-                            <img src="images/CAMINEX Exhibition.jpg" alt="CAMINEX Exhibition">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX FARM MANAGER.jpg" target="_blank">
-                            <img src="images/CAMINEX FARM MANAGER.jpg" alt="CAMINEX FARM MANAGER">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX PIC.jpg" target="_blank">
-                            <img src="images/CAMINEX PIC.jpg" alt="CAMINEX PIC">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX PRESENTATION.jpg" target="_blank">
-                            <img src="images/CAMINEX PRESENTATION.jpg" alt="CAMINEX PRESENTATION">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Caminex Showcase.jpg" target="_blank">
-                            <img src="images/Caminex Showcase.jpg" alt="Caminex Showcase">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX WITH AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX WITH AMBASSADOR.jpg" alt="CAMINEX WITH AMBASSADOR">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX.jpg" target="_blank">
-                            <img src="images/CAMINEX.jpg" alt="CAMINEX">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CERTIFICATE OF APPRECIATION.jpg" target="_blank">
-                            <img src="images/CERTIFICATE OF APPRECIATION.jpg" alt="CERTIFICATE OF APPRECIATION">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Corporate social responsibility towards Menza trust school.jpg" target="_blank">
-                            <img src="images/Corporate social responsibility towards Menza trust school.jpg" alt="Corporate social responsibility towards Menza trust school">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CSR TO KAWAMA.jpg" target="_blank">
-                            <img src="images/CSR TO KAWAMA.jpg" alt="CSR TO KAWAMA">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CSR towards Eden community school in muchinshi.jpg" target="_blank">
-                            <img src="images/CSR towards Eden community school in muchinshi.jpg" alt="CSR towards Eden community school in muchinshi">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Eden Community.jpg" target="_blank">
-                            <img src="images/Eden Community.jpg" alt="Eden Community">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/EDEN Csr.jpg" target="_blank">
-                            <img src="images/EDEN Csr.jpg" alt="EDEN Csr">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Executive Director at the office.jpg" target="_blank">
-                            <img src="images/Executive Director at the office.jpg" alt="Executive Director at the office">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Executive director gving a speech.jpg" target="_blank">
-                            <img src="images/Executive director gving a speech.jpg" alt="Executive director gving a speech">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec and Eden Community.jpg" target="_blank">
-                            <img src="images/Hapitec and Eden Community.jpg" alt="Hapitec and Eden Community">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec Borewors.jpg" target="_blank">
-                            <img src="images/Hapitec Borewors.jpg" alt="Hapitec Borewors">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/HAPITEC Farms.jpg" target="_blank">
-                            <img src="images/HAPITEC Farms.jpg" alt="HAPITEC Farms">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec homemade mince.jpg" target="_blank">
-                            <img src="images/Hapitec homemade mince.jpg" alt="Hapitec homemade mince">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec Partner.jpg" target="_blank">
-                            <img src="images/Hapitec Partner.jpg" alt="Hapitec Partner">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec partners.jpg" target="_blank">
-                            <img src="images/Hapitec partners.jpg" alt="Hapitec partners">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec sausages.jpg" target="_blank">
-                            <img src="images/Hapitec sausages.jpg" alt="Hapitec sausages">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec team.jpg" target="_blank">
-                            <img src="images/Hapitec team.jpg" alt="Hapitec team">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Kawama Secondary CSR.jpg" target="_blank">
-                            <img src="images/Kawama Secondary CSR.jpg" alt="Kawama Secondary CSR">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Kawama Secondary Group Photo.jpg" target="_blank">
-                            <img src="images/Kawama Secondary Group Photo.jpg" alt="Kawama Secondary Group Photo">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Media Presentation at the office.jpg" target="_blank">
-                            <img src="images/Media Presentation at the office.jpg" alt="Media Presentation at the office">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/On the zambia must win walk with Dumisani Ncube.jpg" target="_blank">
-                            <img src="images/On the zambia must win walk with Dumisani Ncube.jpg" alt="On the zambia must win walk with Dumisani Ncube">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Overhead Dam view.jpg" target="_blank">
-                            <img src="images/Overhead Dam view.jpg" alt="Overhead Dam view">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/pig pens showcase.jpg" target="_blank">
-                            <img src="images/pig pens showcase.jpg" alt="pig pens showcase">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/piglets keeping warm.jpg" target="_blank">
-                            <img src="images/piglets keeping warm.jpg" alt="piglets keeping warm">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/piglets suckling.jpg" target="_blank">
-                            <img src="images/piglets suckling.jpg" alt="piglets suckling">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/PIgs.jpg" target="_blank">
-                            <img src="images/PIgs.jpg" alt="PIgs">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/playtim in the pig pens.jpg" target="_blank">
-                            <img src="images/playtim in the pig pens.jpg" alt="playtim in the pig pens">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Pond construction.jpg" target="_blank">
-                            <img src="images/Pond construction.jpg" alt="Pond construction">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/SAYA brochure.png" target="_blank">
-                            <img src="images/SAYA brochure.png" alt="SAYA promotional brochure">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588501095_857362083901159_1010691211480693600_n.jpg" target="_blank">
-                            <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="588501095_857362083901159_1010691211480693600_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
-                            <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="588549763_1196398269091590_2115167589575362366_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588561217_895814889677900_9094463673862063155_n.jpg" target="_blank">
-                            <img src="images/588561217_895814889677900_9094463673862063155_n.jpg" alt="588561217_895814889677900_9094463673862063155_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588564469_1579630409871766_3862578400457867919_n.jpg" target="_blank">
-                            <img src="images/588564469_1579630409871766_3862578400457867919_n.jpg" alt="588564469_1579630409871766_3862578400457867919_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588585944_2198285420663964_7879311455197086507_n.jpg" target="_blank">
-                            <img src="images/588585944_2198285420663964_7879311455197086507_n.jpg" alt="588585944_2198285420663964_7879311455197086507_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588593833_2172819403128844_5784161658005665280_n.jpg" target="_blank">
-                            <img src="images/588593833_2172819403128844_5784161658005665280_n.jpg" alt="588593833_2172819403128844_5784161658005665280_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588624525_751848100569070_260643845824782112_n.jpg" target="_blank">
-                            <img src="images/588624525_751848100569070_260643845824782112_n.jpg" alt="588624525_751848100569070_260643845824782112_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588629505_1967445287156048_4351662337924002597_n.jpg" target="_blank">
-                            <img src="images/588629505_1967445287156048_4351662337924002597_n.jpg" alt="588629505_1967445287156048_4351662337924002597_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588631183_1160419056293341_1720300538668082460_n.jpg" target="_blank">
-                            <img src="images/588631183_1160419056293341_1720300538668082460_n.jpg" alt="588631183_1160419056293341_1720300538668082460_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588636937_811888124994910_4007262576841294081_n.jpg" target="_blank">
-                            <img src="images/588636937_811888124994910_4007262576841294081_n.jpg" alt="588636937_811888124994910_4007262576841294081_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588649789_1183528929777771_1931132066000995188_n.jpg" target="_blank">
-                            <img src="images/588649789_1183528929777771_1931132066000995188_n.jpg" alt="588649789_1183528929777771_1931132066000995188_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588693881_1402100728201624_2556705451086888556_n.jpg" target="_blank">
-                            <img src="images/588693881_1402100728201624_2556705451086888556_n.jpg" alt="588693881_1402100728201624_2556705451086888556_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588717768_717484414256373_7629925319107726543_n.jpg" target="_blank">
-                            <img src="images/588717768_717484414256373_7629925319107726543_n.jpg" alt="588717768_717484414256373_7629925319107726543_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588729063_1372800214476681_8463775389515691889_n.jpg" target="_blank">
-                            <img src="images/588729063_1372800214476681_8463775389515691889_n.jpg" alt="588729063_1372800214476681_8463775389515691889_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588753451_1896416867608297_4622966955592559002_n.jpg" target="_blank">
-                            <img src="images/588753451_1896416867608297_4622966955592559002_n.jpg" alt="588753451_1896416867608297_4622966955592559002_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588803005_1264955688727266_6917099144595292252_n.jpg" target="_blank">
-                            <img src="images/588803005_1264955688727266_6917099144595292252_n.jpg" alt="588803005_1264955688727266_6917099144595292252_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588913425_1738414483484749_1928041514493014160_n.jpg" target="_blank">
-                            <img src="images/588913425_1738414483484749_1928041514493014160_n.jpg" alt="588913425_1738414483484749_1928041514493014160_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/588943135_867550349143348_8833649457481055207_n.jpg" target="_blank">
-                            <img src="images/588943135_867550349143348_8833649457481055207_n.jpg" alt="588943135_867550349143348_8833649457481055207_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589030581_3246139785542935_8786054256582856851_n.jpg" target="_blank">
-                            <img src="images/589030581_3246139785542935_8786054256582856851_n.jpg" alt="589030581_3246139785542935_8786054256582856851_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589112296_32653753550936164_1437035004795656955_n.jpg" target="_blank">
-                            <img src="images/589112296_32653753550936164_1437035004795656955_n.jpg" alt="589112296_32653753550936164_1437035004795656955_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589135126_1503327747564373_2235345761174011299_n.jpg" target="_blank">
-                            <img src="images/589135126_1503327747564373_2235345761174011299_n.jpg" alt="589135126_1503327747564373_2235345761174011299_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589357597_1571997870463903_3342631274116178312_n.jpg" target="_blank">
-                            <img src="images/589357597_1571997870463903_3342631274116178312_n.jpg" alt="589357597_1571997870463903_3342631274116178312_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589512374_1360357899006579_7632220051076540314_n.jpg" target="_blank">
-                            <img src="images/589512374_1360357899006579_7632220051076540314_n.jpg" alt="589512374_1360357899006579_7632220051076540314_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589601014_1678803926425406_4626883336498603813_n.jpg" target="_blank">
-                            <img src="images/589601014_1678803926425406_4626883336498603813_n.jpg" alt="589601014_1678803926425406_4626883336498603813_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589601017_1548804489870561_1224683824387757297_n.jpg" target="_blank">
-                            <img src="images/589601017_1548804489870561_1224683824387757297_n.jpg" alt="589601017_1548804489870561_1224683824387757297_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589648935_1520874759189708_3486635347694883895_n.jpg" target="_blank">
-                            <img src="images/589648935_1520874759189708_3486635347694883895_n.jpg" alt="589648935_1520874759189708_3486635347694883895_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589680389_2332614417180195_6581391081636964411_n.jpg" target="_blank">
-                            <img src="images/589680389_2332614417180195_6581391081636964411_n.jpg" alt="589680389_2332614417180195_6581391081636964411_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589762550_703735295717330_8074637352672693494_n.jpg" target="_blank">
-                            <img src="images/589762550_703735295717330_8074637352672693494_n.jpg" alt="589762550_703735295717330_8074637352672693494_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589817778_1230984075577781_8120458165682451210_n.jpg" target="_blank">
-                            <img src="images/589817778_1230984075577781_8120458165682451210_n.jpg" alt="589817778_1230984075577781_8120458165682451210_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/589924530_1154543286388377_2882200838152448980_n.jpg" target="_blank">
-                            <img src="images/589924530_1154543286388377_2882200838152448980_n.jpg" alt="589924530_1154543286388377_2882200838152448980_n">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/A gaze into the Pig feeding time.jpg" target="_blank">
-                            <img src="images/A gaze into the Pig feeding time.jpg" alt="A gaze into the Pig feeding time">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Agri Coop showcase.jpg" target="_blank">
-                            <img src="images/Agri Coop showcase.jpg" alt="Agri Coop showcase">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" target="_blank">
-                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP ANIMAL WELFARE AWARD">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Agric Presnentation.jpg" target="_blank">
-                            <img src="images/Agric Presnentation.jpg" alt="Agric Presnentation">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambasador fun.jpg" target="_blank">
-                            <img src="images/Ambasador fun.jpg" alt="Ambasador fun">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambassador at DAM filling.jpg" target="_blank">
-                            <img src="images/Ambassador at DAM filling.jpg" alt="Ambassador at DAM filling">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Ambassador i the brooder.jpg" target="_blank">
-                            <img src="images/Ambassador i the brooder.jpg" alt="Ambassador i the brooder">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Award winning pigs.jpg" target="_blank">
-                            <img src="images/Award winning pigs.jpg" alt="Award winning pigs">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX 2025-2.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025-2.jpg" alt="CAMINEX 2025-2">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX 2025.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX Exhibition.jpg" target="_blank">
-                            <img src="images/CAMINEX Exhibition.jpg" alt="CAMINEX Exhibition">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX FARM MANAGER.jpg" target="_blank">
-                            <img src="images/CAMINEX FARM MANAGER.jpg" alt="CAMINEX FARM MANAGER">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX PIC.jpg" target="_blank">
-                            <img src="images/CAMINEX PIC.jpg" alt="CAMINEX PIC">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX PRESENTATION.jpg" target="_blank">
-                            <img src="images/CAMINEX PRESENTATION.jpg" alt="CAMINEX PRESENTATION">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Caminex Showcase.jpg" target="_blank">
-                            <img src="images/Caminex Showcase.jpg" alt="Caminex Showcase">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX WITH AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX WITH AMBASSADOR.jpg" alt="CAMINEX WITH AMBASSADOR">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CAMINEX.jpg" target="_blank">
-                            <img src="images/CAMINEX.jpg" alt="CAMINEX">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Corporate social responsibility towards Menza trust school.jpg" target="_blank">
-                            <img src="images/Corporate social responsibility towards Menza trust school.jpg" alt="Corporate social responsibility towards Menza trust school">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/CSR towards Eden community school in muchinshi.jpg" target="_blank">
-                            <img src="images/CSR towards Eden community school in muchinshi.jpg" alt="CSR towards Eden community school in muchinshi">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/EDEN Csr.jpg" target="_blank">
-                            <img src="images/EDEN Csr.jpg" alt="EDEN Csr">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Executive Director at the office.jpg" target="_blank">
-                            <img src="images/Executive Director at the office.jpg" alt="Executive Director at the office">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Executive director gving a speech.jpg" target="_blank">
-                            <img src="images/Executive director gving a speech.jpg" alt="Executive director gving a speech">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec and Eden Community.jpg" target="_blank">
-                            <img src="images/Hapitec and Eden Community.jpg" alt="Hapitec and Eden Community">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec Borewors.jpg" target="_blank">
-                            <img src="images/Hapitec Borewors.jpg" alt="Hapitec Borewors">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/HAPITEC Farms.jpg" target="_blank">
-                            <img src="images/HAPITEC Farms.jpg" alt="HAPITEC Farms">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec homemade mince.jpg" target="_blank">
-                            <img src="images/Hapitec homemade mince.jpg" alt="Hapitec homemade mince">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec Partner.jpg" target="_blank">
-                            <img src="images/Hapitec Partner.jpg" alt="Hapitec Partner">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec partners.jpg" target="_blank">
-                            <img src="images/Hapitec partners.jpg" alt="Hapitec partners">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Hapitec sausages.jpg" target="_blank">
-                            <img src="images/Hapitec sausages.jpg" alt="Hapitec sausages">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Kawama Secondary CSR.jpg" target="_blank">
-                            <img src="images/Kawama Secondary CSR.jpg" alt="Kawama Secondary CSR">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Kawama Secondary Group Photo.jpg" target="_blank">
-                            <img src="images/Kawama Secondary Group Photo.jpg" alt="Kawama Secondary Group Photo">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Media Presentation at the office.jpg" target="_blank">
-                            <img src="images/Media Presentation at the office.jpg" alt="Media Presentation at the office">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/On the zambia must win walk with Dumisani Ncube.jpg" target="_blank">
-                            <img src="images/On the zambia must win walk with Dumisani Ncube.jpg" alt="On the zambia must win walk with Dumisani Ncube">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Overhead Dam view.jpg" target="_blank">
-                            <img src="images/Overhead Dam view.jpg" alt="Overhead Dam view">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/piglets keeping warm.jpg" target="_blank">
-                            <img src="images/piglets keeping warm.jpg" alt="piglets keeping warm">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/piglets suckling.jpg" target="_blank">
-                            <img src="images/piglets suckling.jpg" alt="piglets suckling">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/playtim in the pig pens.jpg" target="_blank">
-                            <img src="images/playtim in the pig pens.jpg" alt="playtim in the pig pens">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Pond construction.jpg" target="_blank">
-                            <img src="images/Pond construction.jpg" alt="Pond construction">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Some fun at the exhibition.jpg" target="_blank">
-                            <img src="images/Some fun at the exhibition.jpg" alt="Some fun at the exhibition">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/Supporting Pad a Girl camoaign.jpg" target="_blank">
-                            <img src="images/Supporting Pad a Girl camoaign.jpg" alt="Supporting Pad a Girl camoaign">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM (1)">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (1)">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (2)">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM">
-                        </a>
-                    </div>
-                    <div class="gallery-item">
-                        <a href="images/With Nerbert Sinyengo of Lindern Farms.jpg" target="_blank">
-                            <img src="images/With Nerbert Sinyengo of Lindern Farms.jpg" alt="With Nerbert Sinyengo of Lindern Farms">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 <!-- Footer -->
     <footer>
-        <div class="section-container">
-                <p>&copy; 2025 Sustainable Agriculture Youth Alliance (SAYA). All rights reserved.</p>
-            <p>Contact us: saya.agric@outlook.com | 0971212202 | KEM 453, Kamenza East, Lumanji shopping complex, Kampwena market</p>
-            <p>
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Terms of Service</a> |
-                <a href="#">Facebook</a> |
-                <a href="#">Twitter</a> |
+        <div class="section-container footer-grid">
+            <p class="footer-brand">&copy; 2026 Sustainable Agricultural Yield Alliance (SAYA)</p>
+            <p>Growing Leaders. Growing Food. Growing the Future.</p>
+            <p><a href="mailto:saya.agric@outlook.com">saya.agric@outlook.com</a> &middot; 0971 212 202</p>
+            <p>KEM 453, Kamenza East, Lumanji shopping complex, Kampwena market</p>
+            <p class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Facebook</a>
                 <a href="#">LinkedIn</a>
             </p>
         </div>
@@ -3456,18 +3824,28 @@
 
     <script>
         // Navigation function
+        function setMobileMenuOpen(isOpen) {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            if (!navMenu) return;
+            navMenu.classList.toggle('active', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            if (menuBtn) {
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            }
+        }
+
         function navigateTo(sectionId) {
-            // Hide all sections
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
 
-            // Show target section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
-            // Update navigation active state
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('active'));
             const activeLink = document.querySelector(`[data-section="${sectionId}"]`);
@@ -3475,17 +3853,13 @@
                 activeLink.classList.add('active');
             }
 
-            // Close mobile menu if open
-            const navMenu = document.getElementById('navMenu');
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-            }
+            document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.classList.remove('active'));
+            setMobileMenuOpen(false);
         }
 
-        // Mobile menu toggle
         function toggleMobileMenu() {
             const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
+            setMobileMenuOpen(!navMenu.classList.contains('active'));
         }
 
         // Mobile dropdown toggle
@@ -3522,19 +3896,41 @@
                 });
             });
 
-        // Navbar hide/show on scroll
+            document.addEventListener('click', function(e) {
+                const navMenu = document.getElementById('navMenu');
+                const menuBtn = document.getElementById('mobileMenuBtn');
+                if (!navMenu || !navMenu.classList.contains('active')) return;
+                if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    setMobileMenuOpen(false);
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    setMobileMenuOpen(false);
+                }
+            });
+
             let lastScrollTop = 0;
             const navbar = document.querySelector('.navbar');
+            const canAutoHideNav = window.matchMedia('(min-width: 769px)').matches;
 
             window.addEventListener('scroll', function() {
+                if (!canAutoHideNav) return;
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 if (scrollTop > lastScrollTop && scrollTop > 70) {
                     navbar.classList.add('hidden');
                 } else {
                     navbar.classList.remove('hidden');
                 }
-                lastScrollTop = scrollTop;
-            });
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }, { passive: true });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    setMobileMenuOpen(false);
+                }
+            }, { passive: true });
         });
 
         // Form submission handler

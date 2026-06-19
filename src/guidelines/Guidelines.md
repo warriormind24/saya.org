@@ -1,4 +1,4 @@
-# SAYA - Sustainable Agriculture Youth Alliance Guidelines
+# SAYA - Sustainable Agricultural Yield Alliance Guidelines
 
 ## Motto
 "Growing Leaders. Growing Food. Growing the Future."
@@ -21,7 +21,7 @@ To empower youth and farming communities through knowledge, sustainable agricult
 SAYA delivers empowerment, innovation, market access, and a strong voice for young farmers.
 
 ## PREAMBLE
-We, the members of the Sustainable Agriculture Youth Alliance (SAYA), recognizing the importance of sustainable agriculture, livestock production, aquaculture, agribusiness, and youth empowerment, commit ourselves to creating a platform for knowledge sharing, capacity building, technological advancement, entrepreneurship, and stakeholder engagement.
+We, the members of the Sustainable Agricultural Yield Alliance (SAYA), recognizing the importance of sustainable agriculture, livestock production, aquaculture, agribusiness, and youth empowerment, commit ourselves to creating a platform for knowledge sharing, capacity building, technological advancement, entrepreneurship, and stakeholder engagement.
 
 We acknowledge the urgent need for food security, climate resilience, economic empowerment, and youth participation in agriculture. Through SAYA, we unite to transform the agricultural sector for the betterment of our communities and the nation.
 
