@@ -43,6 +43,7 @@
         }
 
         html {
+            font-size: 16px;
             scroll-behavior: smooth;
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
@@ -89,6 +90,7 @@
 
         body {
             font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-size: 1rem;
             line-height: 1.6;
             color: #1f2937;
             overflow-x: hidden;
@@ -300,10 +302,8 @@
             color: #16a34a;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content,
         .dropdown.active .dropdown-content {
             display: block;
         }
@@ -329,6 +329,10 @@
 
         .pattern {
             position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             inset: 0;
             opacity: 0.1;
             background-image: radial-gradient(circle at 2px 2px, rgb(34, 197, 94) 1px, transparent 0);
@@ -364,6 +368,10 @@
 
         .logo-glow {
             position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             inset: 0;
             background-color: #22c55e;
             opacity: 0.2;
@@ -373,6 +381,7 @@
 
         .hero-logo {
             position: relative;
+            width: 200px;
             width: clamp(160px, 28vw, 240px);
             height: auto;
             border-radius: 50%;
@@ -400,6 +409,7 @@
         .hero-stat strong {
             display: block;
             color: #15803d;
+            font-size: 1.5rem;
             font-size: clamp(1.25rem, 3vw, 1.75rem);
             line-height: 1.2;
             margin-bottom: 4px;
@@ -440,6 +450,7 @@
 
         .hero-eyebrow {
             color: var(--color-accent);
+            font-size: 0.9rem;
             font-size: clamp(0.85rem, 2vw, 1rem);
             font-weight: 600;
             letter-spacing: 0.14em;
@@ -450,6 +461,7 @@
 
         .main-title {
             color: #059669;
+            font-size: 1.75rem;
             font-size: clamp(1.2rem, 3.8vw, 2.25rem);
             letter-spacing: 0.1em;
             margin-bottom: 16px;
@@ -731,7 +743,7 @@
         }
 
         .membership-form button {
-            align-self: flex-start;
+            align-self: center;
             margin-top: 8px;
         }
 
@@ -921,6 +933,66 @@
             }
         }
 
+        @media (max-width: 992px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.98);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                gap: 0;
+                padding: 8px 0 24px;
+                z-index: 999;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 14px 24px;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .nav-link.active::after {
+                display: none;
+            }
+
+            .dropdown {
+                position: static;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: none;
+                background: #f9fafb;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+        }
+
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
@@ -933,6 +1005,10 @@
 
             .section {
                 padding-top: 64px;
+            }
+
+            .nav-menu {
+                top: 64px;
             }
 
             .saya-logo {
@@ -1132,10 +1208,53 @@
             }
         }
 
+        @media (max-width: 640px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 320px;
+            }
+
+            .leadership-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .leader-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .stats-grid,
+            .impact-grid,
+            .hapitec-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .provinces-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+            }
+
+            .gallery-item img {
+                height: 160px;
+            }
+        }
+
         @media (max-width: 480px) {
             .hero-stats {
                 grid-template-columns: 1fr;
                 max-width: 220px;
+            }
+
+            .leadership-grid,
+            .stats-grid,
+            .impact-grid,
+            .hapitec-features {
+                grid-template-columns: 1fr;
             }
 
             .acronym {
@@ -1148,6 +1267,15 @@
 
             .saya-logo {
                 height: 36px;
+            }
+
+            .leader-image {
+                width: 90px;
+                height: 90px;
+            }
+
+            .launch-gallery-img {
+                height: 180px;
             }
         }
 
@@ -1243,6 +1371,7 @@
         .partner-logos-cascade {
             margin-top: 64px;
             overflow: hidden;
+            touch-action: pan-y;
         }
 
         .partner-logos-cascade h3 {
@@ -1257,6 +1386,8 @@
             gap: 32px;
             margin-bottom: 24px;
             width: max-content;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .cascade-row img {
@@ -1286,8 +1417,10 @@
             animation: cascadeScrollRight 35s linear infinite;
         }
 
-        .partner-logos-cascade:hover .cascade-row {
-            animation-play-state: paused;
+        @media (hover: hover) and (pointer: fine) {
+            .partner-logos-cascade:hover .cascade-row {
+                animation-play-state: paused;
+            }
         }
 
         @keyframes cascadeScrollLeft {
@@ -1309,6 +1442,14 @@
 
             .cascade-row {
                 gap: 20px;
+            }
+
+            .cascade-row-left {
+                animation-duration: 25s;
+            }
+
+            .cascade-row-right {
+                animation-duration: 30s;
             }
         }
 
@@ -1449,6 +1590,7 @@
             text-align: center;
             margin-bottom: 16px;
             font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
         }
 
         .awards-section p {
@@ -1780,11 +1922,24 @@
             border-radius: 8px;
         }
 
+        @media (max-width: 1024px) {
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+        }
+
         @media (max-width: 768px) {
             .lightbox-close {
                 top: 10px;
                 right: 10px;
                 font-size: 24px;
+                padding: 12px;
+                min-width: 44px;
+                min-height: 44px;
             }
 
             .lightbox-nav {
@@ -1897,6 +2052,34 @@
             }
         }
     </style>
+    <noscript>
+        <style>
+            .section {
+                display: block !important;
+            }
+            .mobile-menu-btn {
+                display: none !important;
+            }
+            .nav-menu {
+                display: flex !important;
+                position: static !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                gap: 16px !important;
+                padding: 0 !important;
+                background: transparent !important;
+                box-shadow: none !important;
+            }
+            .dropdown-content {
+                position: relative !important;
+                display: block !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding-left: 16px !important;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
     <a class="skip-link" href="#home">Skip to content</a>
@@ -3177,10 +3360,12 @@
             <div class="partner-logos-cascade">
                 <h3>Our Valued Partners</h3>
                 <div class="cascade-row cascade-row-left">
+                    <img src="New saya logo.jpeg" alt="SAYA">
                     <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
                     <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
                     <img src="partner logos/SB08.jpeg" alt="SB08">
                     <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                    <img src="New saya logo.jpeg" alt="SAYA">
                     <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
                     <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
                     <img src="partner logos/SB08.jpeg" alt="SB08">
@@ -3189,10 +3374,12 @@
                 <div class="cascade-row cascade-row-right">
                     <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
                     <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="New saya logo.jpeg" alt="SAYA">
                     <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
                     <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
                     <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
                     <img src="partner logos/SB08.jpeg" alt="SB08">
+                    <img src="New saya logo.jpeg" alt="SAYA">
                     <img src="partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
                     <img src="partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
                 </div>
@@ -3833,6 +4020,9 @@
             if (menuBtn) {
                 menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                 menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                menuBtn.innerHTML = isOpen
+                    ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+                    : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
             }
         }
 
@@ -3862,13 +4052,18 @@
             setMobileMenuOpen(!navMenu.classList.contains('active'));
         }
 
-        // Mobile dropdown toggle
+        // Dropdown toggle for touch and keyboard accessibility
         const dropdowns = document.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
+            const toggle = dropdown.querySelector('.nav-link');
+            if (!toggle) return;
+
+            toggle.addEventListener('click', function(e) {
+                if (!this.getAttribute('data-section')) {
                     e.preventDefault();
-                    this.classList.toggle('active');
+                    const isActive = dropdown.classList.contains('active');
+                    dropdowns.forEach(d => d.classList.remove('active'));
+                    dropdown.classList.toggle('active', !isActive);
                 }
             });
         });
@@ -3891,6 +4086,7 @@
             dropdownLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+                    e.stopPropagation();
                     const sectionId = this.getAttribute('data-section');
                     navigateTo(sectionId);
                 });
@@ -3913,7 +4109,7 @@
 
             let lastScrollTop = 0;
             const navbar = document.querySelector('.navbar');
-            const canAutoHideNav = window.matchMedia('(min-width: 769px)').matches;
+            const canAutoHideNav = window.matchMedia('(min-width: 993px)').matches;
 
             window.addEventListener('scroll', function() {
                 if (!canAutoHideNav) return;
@@ -3927,7 +4123,7 @@
             }, { passive: true });
 
             window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 992) {
                     setMobileMenuOpen(false);
                 }
             }, { passive: true });
