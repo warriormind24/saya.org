@@ -2053,6 +2053,34 @@
                 height: 90px;
             }
         }
+
+        /* Performance & accessibility: respect user motion/data preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @media (prefers-reduced-data: reduce) {
+            body::before,
+            .decorative {
+                display: none;
+            }
+        }
+
+        /* Mobile: reduce heavy background effects on small screens */
+        @media (max-width: 768px) {
+            body::before {
+                background-size: 200px;
+                opacity: 0.03;
+            }
+            .decorative {
+                display: none;
+            }
+        }
     </style>
     <noscript>
         <style>
@@ -2462,7 +2490,7 @@
                 </div>
 
                 <div class="hapitec-logo-large">
-                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment Limited">
+                    <img src="Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment Limited" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -2473,42 +2501,42 @@
                 <div class="awards-grid">
                     <div class="award-card">
                         <a href="images/AGRI-COOP 2025.jpg" target="_blank">
-                            <img src="images/AGRI-COOP 2025.jpg" alt="AGRI-COOP 2025 Award">
+                            <img src="images/AGRI-COOP 2025.jpg" alt="AGRI-COOP 2025 Award" loading="lazy" decoding="async">
                         </a>
                         <h4>AGRI-COOP 2025</h4>
                         <p>Outstanding contribution to cooperative agriculture.</p>
                     </div>
                     <div class="award-card">
                         <a href="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" target="_blank">
-                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP Animal Welfare Award">
+                            <img src="images/AGRI-COOP ANIMAL WELFARE AWARD.jpg" alt="AGRI-COOP Animal Welfare Award" loading="lazy" decoding="async">
                         </a>
                         <h4>AGRI-COOP Animal Welfare Award</h4>
                         <p>Recognition for excellence in animal welfare practices.</p>
                     </div>
                     <div class="award-card">
                         <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 Best Commercial Pig Farmer">
+                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 Best Commercial Pig Farmer" loading="lazy" decoding="async">
                         </a>
                         <h4>CAMINEX 2025 Best Commercial Pig Farmer</h4>
                         <p>Award for innovative pig farming techniques.</p>
                     </div>
                     <div class="award-card">
                         <a href="images/CAMINEX 2025.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
+                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025" loading="lazy" decoding="async">
                         </a>
                         <h4>CAMINEX 2025</h4>
                         <p>Excellence in agricultural innovation.</p>
                     </div>
                     <div class="award-card">
                         <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX Ambassador">
+                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX Ambassador" loading="lazy" decoding="async">
                         </a>
                         <h4>CAMINEX Ambassador</h4>
                         <p>Ambassador for agricultural excellence.</p>
                     </div>
                     <div class="award-card">
                         <a href="images/CERTIFICATE OF APPRECIATION.jpg" target="_blank">
-                            <img src="images/CERTIFICATE OF APPRECIATION.jpg" alt="Certificate of Appreciation">
+                            <img src="images/CERTIFICATE OF APPRECIATION.jpg" alt="Certificate of Appreciation" loading="lazy" decoding="async">
                         </a>
                         <h4>Certificate of Appreciation</h4>
                         <p>Appreciation for community impact.</p>
@@ -2547,42 +2575,42 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/A gaze into the Pig feeding time.jpg" target="_blank">
-                            <img src="images/A gaze into the Pig feeding time.jpg" alt="A gaze into the Pig feeding time">
+                            <img src="images/A gaze into the Pig feeding time.jpg" alt="A gaze into the Pig feeding time" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Ambassador i the brooder.jpg" target="_blank">
-                            <img src="images/Ambassador i the brooder.jpg" alt="Ambassador i the brooder">
+                            <img src="images/Ambassador i the brooder.jpg" alt="Ambassador i the brooder" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Award winning pigs.jpg" target="_blank">
-                            <img src="images/Award winning pigs.jpg" alt="Award winning pigs">
+                            <img src="images/Award winning pigs.jpg" alt="Award winning pigs" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/pig pens showcase.jpg" target="_blank">
-                            <img src="images/pig pens showcase.jpg" alt="pig pens showcase">
+                            <img src="images/pig pens showcase.jpg" alt="pig pens showcase" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/piglets keeping warm.jpg" target="_blank">
-                            <img src="images/piglets keeping warm.jpg" alt="piglets keeping warm">
+                            <img src="images/piglets keeping warm.jpg" alt="piglets keeping warm" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/piglets suckling.jpg" target="_blank">
-                            <img src="images/piglets suckling.jpg" alt="piglets suckling">
+                            <img src="images/piglets suckling.jpg" alt="piglets suckling" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/PIgs.jpg" target="_blank">
-                            <img src="images/PIgs.jpg" alt="PIgs">
+                            <img src="images/PIgs.jpg" alt="PIgs" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/playtim in the pig pens.jpg" target="_blank">
-                            <img src="images/playtim in the pig pens.jpg" alt="playtim in the pig pens">
+                            <img src="images/playtim in the pig pens.jpg" alt="playtim in the pig pens" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2592,17 +2620,17 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Hapitec Borewors.jpg" target="_blank">
-                            <img src="images/Hapitec Borewors.jpg" alt="Hapitec Borewors">
+                            <img src="images/Hapitec Borewors.jpg" alt="Hapitec Borewors" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec homemade mince.jpg" target="_blank">
-                            <img src="images/Hapitec homemade mince.jpg" alt="Hapitec homemade mince">
+                            <img src="images/Hapitec homemade mince.jpg" alt="Hapitec homemade mince" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec sausages.jpg" target="_blank">
-                            <img src="images/Hapitec sausages.jpg" alt="Hapitec sausages">
+                            <img src="images/Hapitec sausages.jpg" alt="Hapitec sausages" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2612,32 +2640,32 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Pond construction.jpg" target="_blank">
-                            <img src="images/Pond construction.jpg" alt="Pond construction">
+                            <img src="images/Pond construction.jpg" alt="Pond construction" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" target="_blank">
-                            <img src="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" alt="LATTICE WYEEFIMA aquaculture project">
+                            <img src="Lattice/588426861_2352976315215321_7244104810911721717_n.jpg" alt="LATTICE WYEEFIMA aquaculture project" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" target="_blank">
-                            <img src="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" alt="Youth fish farming empowerment">
+                            <img src="Lattice/600043420_1503410174069144_5273484956427233412_n.jpg" alt="Youth fish farming empowerment" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" target="_blank">
-                            <img src="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" alt="Tilapia fingerlings distribution">
+                            <img src="Lattice/604850836_2317005075389270_1982181976046976599_n.jpg" alt="Tilapia fingerlings distribution" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" target="_blank">
-                            <img src="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" alt="Aquaculture training session">
+                            <img src="Lattice/604952211_890529133327960_2594452624698719732_n.jpg" alt="Aquaculture training session" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" target="_blank">
-                            <img src="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" alt="Fish feed support for youth farmers">
+                            <img src="Lattice/605085340_754677770997045_2316149349486594536_n.jpg" alt="Fish feed support for youth farmers" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2647,12 +2675,12 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Ambassador at DAM filling.jpg" target="_blank">
-                            <img src="images/Ambassador at DAM filling.jpg" alt="Ambassador at DAM filling">
+                            <img src="images/Ambassador at DAM filling.jpg" alt="Ambassador at DAM filling" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Overhead Dam view.jpg" target="_blank">
-                            <img src="images/Overhead Dam view.jpg" alt="Overhead Dam view">
+                            <img src="images/Overhead Dam view.jpg" alt="Overhead Dam view" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2662,67 +2690,67 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Agric Presnentation.jpg" target="_blank">
-                            <img src="images/Agric Presnentation.jpg" alt="Agric Presnentation">
+                            <img src="images/Agric Presnentation.jpg" alt="Agric Presnentation" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 BEST COMMERCIAL PIG FARMER">
+                            <img src="images/CAMINEX 2025 BEST COMMERCIAL PIG FARMER.jpg" alt="CAMINEX 2025 BEST COMMERCIAL PIG FARMER" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX 2025-2.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025-2.jpg" alt="CAMINEX 2025-2">
+                            <img src="images/CAMINEX 2025-2.jpg" alt="CAMINEX 2025-2" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX 2025.jpg" target="_blank">
-                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025">
+                            <img src="images/CAMINEX 2025.jpg" alt="CAMINEX 2025" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX AMBASSADOR">
+                            <img src="images/CAMINEX AMBASSADOR.jpg" alt="CAMINEX AMBASSADOR" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX Exhibition.jpg" target="_blank">
-                            <img src="images/CAMINEX Exhibition.jpg" alt="CAMINEX Exhibition">
+                            <img src="images/CAMINEX Exhibition.jpg" alt="CAMINEX Exhibition" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX FARM MANAGER.jpg" target="_blank">
-                            <img src="images/CAMINEX FARM MANAGER.jpg" alt="CAMINEX FARM MANAGER">
+                            <img src="images/CAMINEX FARM MANAGER.jpg" alt="CAMINEX FARM MANAGER" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX PIC.jpg" target="_blank">
-                            <img src="images/CAMINEX PIC.jpg" alt="CAMINEX PIC">
+                            <img src="images/CAMINEX PIC.jpg" alt="CAMINEX PIC" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX PRESENTATION.jpg" target="_blank">
-                            <img src="images/CAMINEX PRESENTATION.jpg" alt="CAMINEX PRESENTATION">
+                            <img src="images/CAMINEX PRESENTATION.jpg" alt="CAMINEX PRESENTATION" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Caminex Showcase.jpg" target="_blank">
-                            <img src="images/Caminex Showcase.jpg" alt="Caminex Showcase">
+                            <img src="images/Caminex Showcase.jpg" alt="Caminex Showcase" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX WITH AMBASSADOR.jpg" target="_blank">
-                            <img src="images/CAMINEX WITH AMBASSADOR.jpg" alt="CAMINEX WITH AMBASSADOR">
+                            <img src="images/CAMINEX WITH AMBASSADOR.jpg" alt="CAMINEX WITH AMBASSADOR" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CAMINEX.jpg" target="_blank">
-                            <img src="images/CAMINEX.jpg" alt="CAMINEX">
+                            <img src="images/CAMINEX.jpg" alt="CAMINEX" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Some fun at the exhibition.jpg" target="_blank">
-                            <img src="images/Some fun at the exhibition.jpg" alt="Some fun at the exhibition">
+                            <img src="images/Some fun at the exhibition.jpg" alt="Some fun at the exhibition" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2732,47 +2760,47 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Corporate social responsibility towards Menza trust school.jpg" target="_blank">
-                            <img src="images/Corporate social responsibility towards Menza trust school.jpg" alt="Corporate social responsibility towards Menza trust school">
+                            <img src="images/Corporate social responsibility towards Menza trust school.jpg" alt="Corporate social responsibility towards Menza trust school" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CSR TO KAWAMA.jpg" target="_blank">
-                            <img src="images/CSR TO KAWAMA.jpg" alt="CSR TO KAWAMA">
+                            <img src="images/CSR TO KAWAMA.jpg" alt="CSR TO KAWAMA" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/CSR towards Eden community school in muchinshi.jpg" target="_blank">
-                            <img src="images/CSR towards Eden community school in muchinshi.jpg" alt="CSR towards Eden community school in muchinshi">
+                            <img src="images/CSR towards Eden community school in muchinshi.jpg" alt="CSR towards Eden community school in muchinshi" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Eden Community.jpg" target="_blank">
-                            <img src="images/Eden Community.jpg" alt="Eden Community">
+                            <img src="images/Eden Community.jpg" alt="Eden Community" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/EDEN Csr.jpg" target="_blank">
-                            <img src="images/EDEN Csr.jpg" alt="EDEN Csr">
+                            <img src="images/EDEN Csr.jpg" alt="EDEN Csr" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec and Eden Community.jpg" target="_blank">
-                            <img src="images/Hapitec and Eden Community.jpg" alt="Hapitec and Eden Community">
+                            <img src="images/Hapitec and Eden Community.jpg" alt="Hapitec and Eden Community" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Kawama Secondary CSR.jpg" target="_blank">
-                            <img src="images/Kawama Secondary CSR.jpg" alt="Kawama Secondary CSR">
+                            <img src="images/Kawama Secondary CSR.jpg" alt="Kawama Secondary CSR" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Kawama Secondary Group Photo.jpg" target="_blank">
-                            <img src="images/Kawama Secondary Group Photo.jpg" alt="Kawama Secondary Group Photo">
+                            <img src="images/Kawama Secondary Group Photo.jpg" alt="Kawama Secondary Group Photo" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Supporting Pad a Girl camoaign.jpg" target="_blank">
-                            <img src="images/Supporting Pad a Girl camoaign.jpg" alt="Supporting Pad a Girl camoaign">
+                            <img src="images/Supporting Pad a Girl camoaign.jpg" alt="Supporting Pad a Girl camoaign" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2782,37 +2810,37 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Executive Director at the office.jpg" target="_blank">
-                            <img src="images/Executive Director at the office.jpg" alt="Executive Director at the office">
+                            <img src="images/Executive Director at the office.jpg" alt="Executive Director at the office" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Executive director gving a speech.jpg" target="_blank">
-                            <img src="images/Executive director gving a speech.jpg" alt="Executive director gving a speech">
+                            <img src="images/Executive director gving a speech.jpg" alt="Executive director gving a speech" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec Partner.jpg" target="_blank">
-                            <img src="images/Hapitec Partner.jpg" alt="Hapitec Partner">
+                            <img src="images/Hapitec Partner.jpg" alt="Hapitec Partner" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec partners.jpg" target="_blank">
-                            <img src="images/Hapitec partners.jpg" alt="Hapitec partners">
+                            <img src="images/Hapitec partners.jpg" alt="Hapitec partners" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Hapitec team.jpg" target="_blank">
-                            <img src="images/Hapitec team.jpg" alt="Hapitec team">
+                            <img src="images/Hapitec team.jpg" alt="Hapitec team" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/Media Presentation at the office.jpg" target="_blank">
-                            <img src="images/Media Presentation at the office.jpg" alt="Media Presentation at the office">
+                            <img src="images/Media Presentation at the office.jpg" alt="Media Presentation at the office" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/With Nerbert Sinyengo of Lindern Farms.jpg" target="_blank">
-                            <img src="images/With Nerbert Sinyengo of Lindern Farms.jpg" alt="With Nerbert Sinyengo of Lindern Farms">
+                            <img src="images/With Nerbert Sinyengo of Lindern Farms.jpg" alt="With Nerbert Sinyengo of Lindern Farms" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -2822,182 +2850,182 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/588501095_857362083901159_1010691211480693600_n.jpg" target="_blank">
-                            <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="588501095 857362083901159 1010691211480693600 n">
+                            <img src="images/588501095_857362083901159_1010691211480693600_n.jpg" alt="588501095 857362083901159 1010691211480693600 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
-                            <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="588549763 1196398269091590 2115167589575362366 n">
+                            <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="588549763 1196398269091590 2115167589575362366 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588561217_895814889677900_9094463673862063155_n.jpg" target="_blank">
-                            <img src="images/588561217_895814889677900_9094463673862063155_n.jpg" alt="588561217 895814889677900 9094463673862063155 n">
+                            <img src="images/588561217_895814889677900_9094463673862063155_n.jpg" alt="588561217 895814889677900 9094463673862063155 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588564469_1579630409871766_3862578400457867919_n.jpg" target="_blank">
-                            <img src="images/588564469_1579630409871766_3862578400457867919_n.jpg" alt="588564469 1579630409871766 3862578400457867919 n">
+                            <img src="images/588564469_1579630409871766_3862578400457867919_n.jpg" alt="588564469 1579630409871766 3862578400457867919 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588585944_2198285420663964_7879311455197086507_n.jpg" target="_blank">
-                            <img src="images/588585944_2198285420663964_7879311455197086507_n.jpg" alt="588585944 2198285420663964 7879311455197086507 n">
+                            <img src="images/588585944_2198285420663964_7879311455197086507_n.jpg" alt="588585944 2198285420663964 7879311455197086507 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588593833_2172819403128844_5784161658005665280_n.jpg" target="_blank">
-                            <img src="images/588593833_2172819403128844_5784161658005665280_n.jpg" alt="588593833 2172819403128844 5784161658005665280 n">
+                            <img src="images/588593833_2172819403128844_5784161658005665280_n.jpg" alt="588593833 2172819403128844 5784161658005665280 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588624525_751848100569070_260643845824782112_n.jpg" target="_blank">
-                            <img src="images/588624525_751848100569070_260643845824782112_n.jpg" alt="588624525 751848100569070 260643845824782112 n">
+                            <img src="images/588624525_751848100569070_260643845824782112_n.jpg" alt="588624525 751848100569070 260643845824782112 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588629505_1967445287156048_4351662337924002597_n.jpg" target="_blank">
-                            <img src="images/588629505_1967445287156048_4351662337924002597_n.jpg" alt="588629505 1967445287156048 4351662337924002597 n">
+                            <img src="images/588629505_1967445287156048_4351662337924002597_n.jpg" alt="588629505 1967445287156048 4351662337924002597 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588631183_1160419056293341_1720300538668082460_n.jpg" target="_blank">
-                            <img src="images/588631183_1160419056293341_1720300538668082460_n.jpg" alt="588631183 1160419056293341 1720300538668082460 n">
+                            <img src="images/588631183_1160419056293341_1720300538668082460_n.jpg" alt="588631183 1160419056293341 1720300538668082460 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588636937_811888124994910_4007262576841294081_n.jpg" target="_blank">
-                            <img src="images/588636937_811888124994910_4007262576841294081_n.jpg" alt="588636937 811888124994910 4007262576841294081 n">
+                            <img src="images/588636937_811888124994910_4007262576841294081_n.jpg" alt="588636937 811888124994910 4007262576841294081 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588649789_1183528929777771_1931132066000995188_n.jpg" target="_blank">
-                            <img src="images/588649789_1183528929777771_1931132066000995188_n.jpg" alt="588649789 1183528929777771 1931132066000995188 n">
+                            <img src="images/588649789_1183528929777771_1931132066000995188_n.jpg" alt="588649789 1183528929777771 1931132066000995188 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588693881_1402100728201624_2556705451086888556_n.jpg" target="_blank">
-                            <img src="images/588693881_1402100728201624_2556705451086888556_n.jpg" alt="588693881 1402100728201624 2556705451086888556 n">
+                            <img src="images/588693881_1402100728201624_2556705451086888556_n.jpg" alt="588693881 1402100728201624 2556705451086888556 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588717768_717484414256373_7629925319107726543_n.jpg" target="_blank">
-                            <img src="images/588717768_717484414256373_7629925319107726543_n.jpg" alt="588717768 717484414256373 7629925319107726543 n">
+                            <img src="images/588717768_717484414256373_7629925319107726543_n.jpg" alt="588717768 717484414256373 7629925319107726543 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588729063_1372800214476681_8463775389515691889_n.jpg" target="_blank">
-                            <img src="images/588729063_1372800214476681_8463775389515691889_n.jpg" alt="588729063 1372800214476681 8463775389515691889 n">
+                            <img src="images/588729063_1372800214476681_8463775389515691889_n.jpg" alt="588729063 1372800214476681 8463775389515691889 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588753451_1896416867608297_4622966955592559002_n.jpg" target="_blank">
-                            <img src="images/588753451_1896416867608297_4622966955592559002_n.jpg" alt="588753451 1896416867608297 4622966955592559002 n">
+                            <img src="images/588753451_1896416867608297_4622966955592559002_n.jpg" alt="588753451 1896416867608297 4622966955592559002 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588803005_1264955688727266_6917099144595292252_n.jpg" target="_blank">
-                            <img src="images/588803005_1264955688727266_6917099144595292252_n.jpg" alt="588803005 1264955688727266 6917099144595292252 n">
+                            <img src="images/588803005_1264955688727266_6917099144595292252_n.jpg" alt="588803005 1264955688727266 6917099144595292252 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588913425_1738414483484749_1928041514493014160_n.jpg" target="_blank">
-                            <img src="images/588913425_1738414483484749_1928041514493014160_n.jpg" alt="588913425 1738414483484749 1928041514493014160 n">
+                            <img src="images/588913425_1738414483484749_1928041514493014160_n.jpg" alt="588913425 1738414483484749 1928041514493014160 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/588943135_867550349143348_8833649457481055207_n.jpg" target="_blank">
-                            <img src="images/588943135_867550349143348_8833649457481055207_n.jpg" alt="588943135 867550349143348 8833649457481055207 n">
+                            <img src="images/588943135_867550349143348_8833649457481055207_n.jpg" alt="588943135 867550349143348 8833649457481055207 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589030581_3246139785542935_8786054256582856851_n.jpg" target="_blank">
-                            <img src="images/589030581_3246139785542935_8786054256582856851_n.jpg" alt="589030581 3246139785542935 8786054256582856851 n">
+                            <img src="images/589030581_3246139785542935_8786054256582856851_n.jpg" alt="589030581 3246139785542935 8786054256582856851 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589112296_32653753550936164_1437035004795656955_n.jpg" target="_blank">
-                            <img src="images/589112296_32653753550936164_1437035004795656955_n.jpg" alt="589112296 32653753550936164 1437035004795656955 n">
+                            <img src="images/589112296_32653753550936164_1437035004795656955_n.jpg" alt="589112296 32653753550936164 1437035004795656955 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589135126_1503327747564373_2235345761174011299_n.jpg" target="_blank">
-                            <img src="images/589135126_1503327747564373_2235345761174011299_n.jpg" alt="589135126 1503327747564373 2235345761174011299 n">
+                            <img src="images/589135126_1503327747564373_2235345761174011299_n.jpg" alt="589135126 1503327747564373 2235345761174011299 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589357597_1571997870463903_3342631274116178312_n.jpg" target="_blank">
-                            <img src="images/589357597_1571997870463903_3342631274116178312_n.jpg" alt="589357597 1571997870463903 3342631274116178312 n">
+                            <img src="images/589357597_1571997870463903_3342631274116178312_n.jpg" alt="589357597 1571997870463903 3342631274116178312 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589512374_1360357899006579_7632220051076540314_n.jpg" target="_blank">
-                            <img src="images/589512374_1360357899006579_7632220051076540314_n.jpg" alt="589512374 1360357899006579 7632220051076540314 n">
+                            <img src="images/589512374_1360357899006579_7632220051076540314_n.jpg" alt="589512374 1360357899006579 7632220051076540314 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589601014_1678803926425406_4626883336498603813_n.jpg" target="_blank">
-                            <img src="images/589601014_1678803926425406_4626883336498603813_n.jpg" alt="589601014 1678803926425406 4626883336498603813 n">
+                            <img src="images/589601014_1678803926425406_4626883336498603813_n.jpg" alt="589601014 1678803926425406 4626883336498603813 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589601017_1548804489870561_1224683824387757297_n.jpg" target="_blank">
-                            <img src="images/589601017_1548804489870561_1224683824387757297_n.jpg" alt="589601017 1548804489870561 1224683824387757297 n">
+                            <img src="images/589601017_1548804489870561_1224683824387757297_n.jpg" alt="589601017 1548804489870561 1224683824387757297 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589648935_1520874759189708_3486635347694883895_n.jpg" target="_blank">
-                            <img src="images/589648935_1520874759189708_3486635347694883895_n.jpg" alt="589648935 1520874759189708 3486635347694883895 n">
+                            <img src="images/589648935_1520874759189708_3486635347694883895_n.jpg" alt="589648935 1520874759189708 3486635347694883895 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589680389_2332614417180195_6581391081636964411_n.jpg" target="_blank">
-                            <img src="images/589680389_2332614417180195_6581391081636964411_n.jpg" alt="589680389 2332614417180195 6581391081636964411 n">
+                            <img src="images/589680389_2332614417180195_6581391081636964411_n.jpg" alt="589680389 2332614417180195 6581391081636964411 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589762550_703735295717330_8074637352672693494_n.jpg" target="_blank">
-                            <img src="images/589762550_703735295717330_8074637352672693494_n.jpg" alt="589762550 703735295717330 8074637352672693494 n">
+                            <img src="images/589762550_703735295717330_8074637352672693494_n.jpg" alt="589762550 703735295717330 8074637352672693494 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589817778_1230984075577781_8120458165682451210_n.jpg" target="_blank">
-                            <img src="images/589817778_1230984075577781_8120458165682451210_n.jpg" alt="589817778 1230984075577781 8120458165682451210 n">
+                            <img src="images/589817778_1230984075577781_8120458165682451210_n.jpg" alt="589817778 1230984075577781 8120458165682451210 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/589924530_1154543286388377_2882200838152448980_n.jpg" target="_blank">
-                            <img src="images/589924530_1154543286388377_2882200838152448980_n.jpg" alt="589924530 1154543286388377 2882200838152448980 n">
+                            <img src="images/589924530_1154543286388377_2882200838152448980_n.jpg" alt="589924530 1154543286388377 2882200838152448980 n" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/On the zambia must win walk with Dumisani Ncube.jpg" target="_blank">
-                            <img src="images/On the zambia must win walk with Dumisani Ncube.jpg" alt="On the zambia must win walk with Dumisani Ncube">
+                            <img src="images/On the zambia must win walk with Dumisani Ncube.jpg" alt="On the zambia must win walk with Dumisani Ncube" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM (1)">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM (1)" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.27 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.27 PM" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (1)">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (1).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (1)" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (2)">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM (2).jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM (2)" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" target="_blank">
-                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM">
+                            <img src="images/WhatsApp Image 2025-12-22 at 12.04.28 PM.jpeg" alt="WhatsApp Image 2025-12-22 at 12.04.28 PM" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -3007,12 +3035,12 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/Ambasador fun.jpg" target="_blank">
-                            <img src="images/Ambasador fun.jpg" alt="Ambasador fun">
+                            <img src="images/Ambasador fun.jpg" alt="Ambasador fun" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/HAPITEC Farms.jpg" target="_blank">
-                            <img src="images/HAPITEC Farms.jpg" alt="HAPITEC Farms">
+                            <img src="images/HAPITEC Farms.jpg" alt="HAPITEC Farms" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -3022,7 +3050,7 @@
                     <div class="gallery-grid">
                     <div class="gallery-item">
                         <a href="images/SAYA brochure.png" target="_blank">
-                            <img src="images/SAYA brochure.png" alt="SAYA promotional brochure">
+                            <img src="images/SAYA brochure.png" alt="SAYA promotional brochure" loading="lazy" decoding="async">
                         </a>
                     </div>
                     </div>
@@ -3170,7 +3198,7 @@
                 <p>Farmers, educators, industry partners, and SAYA leaders guiding the alliance's strategic direction.</p>
                 <div class="leadership-grid">
                     <div class="leader-card">
-                        <img src="../leadership team/Michael Mwelwa.jpg" alt="Michael Mwelwa" class="leader-image">
+                        <img src="../leadership team/Michael Mwelwa.jpg" alt="Michael Mwelwa" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Michael Mwelwa</h4>
                         <p class="leader-position">Founder, Macmel Poultry Production Hub</p>
                         <details class="leader-details">
@@ -3179,7 +3207,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Felix Chambuleni.jpg" alt="Felix Chambuleni" class="leader-image">
+                        <img src="../leadership team/Felix Chambuleni.jpg" alt="Felix Chambuleni" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Felix Chambuleni</h4>
                         <p class="leader-position">Teacher / Pig Farmer / CEO, Gina's Countryside Farm</p>
                         <details class="leader-details">
@@ -3188,7 +3216,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Alfonso Ngwezi.jpeg" alt="Alfonso Ngwezi" class="leader-image">
+                        <img src="../leadership team/Alfonso Ngwezi.jpeg" alt="Alfonso Ngwezi" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Alfonso Ngwezi</h4>
                         <p class="leader-position">Proprietor, Ngwezi Farm</p>
                         <details class="leader-details">
@@ -3197,7 +3225,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/prince ngwezi.PNG" alt="Prince Ngwezi" class="leader-image">
+                        <img src="../leadership team/prince ngwezi.PNG" alt="Prince Ngwezi" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Prince Ngwezi</h4>
                         <p class="leader-position">Teacher / Sales Executive, Ngwezi Farm</p>
                         <details class="leader-details">
@@ -3206,7 +3234,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Given Katakwe.jpg" alt="Given Katakwe" class="leader-image">
+                        <img src="../leadership team/Given Katakwe.jpg" alt="Given Katakwe" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Given Katakwe</h4>
                         <p class="leader-position">SAYA Offtake &amp; Registration Lead</p>
                         <details class="leader-details">
@@ -3215,7 +3243,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Happy Mulobeka.jpg" alt="Happy Mulobeka" class="leader-image">
+                        <img src="../leadership team/Happy Mulobeka.jpg" alt="Happy Mulobeka" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Happy Mulobeka</h4>
                         <p class="leader-position">SAYA Chairperson</p>
                     </div>
@@ -3229,7 +3257,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Prudence Kambafwile.jpg" alt="Prudence Kambafwile" class="leader-image">
+                        <img src="../leadership team/Prudence Kambafwile.jpg" alt="Prudence Kambafwile" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Prudence Kambafwile</h4>
                         <p class="leader-position">Administrative Director, Hapitec Investment / Proprietor, Kamby Stores / Nurse</p>
                         <details class="leader-details">
@@ -3247,7 +3275,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Maxwell Simuchimba.jpg" alt="Maxwell Simuchimba" class="leader-image">
+                        <img src="../leadership team/Maxwell Simuchimba.jpg" alt="Maxwell Simuchimba" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Maxwell Simuchimba</h4>
                         <p class="leader-position">Ministry of Fisheries and Livestock / CEO, Bmanji Agripulse Services</p>
                         <details class="leader-details">
@@ -3283,7 +3311,7 @@
                         </details>
                     </div>
                     <div class="leader-card">
-                        <img src="../leadership team/Dominic Tembo.jpg" alt="Dominic Tembo" class="leader-image">
+                        <img src="../leadership team/Dominic Tembo.jpg" alt="Dominic Tembo" class="leader-image" loading="lazy" decoding="async" sizes="(max-width: 480px) 90px, (max-width: 768px) 100px, 120px">
                         <h4>Dominic Tembo</h4>
                         <p class="leader-position">SAYA Technology Officer</p>
                         <details class="leader-details">
@@ -3414,28 +3442,28 @@
             <div class="partner-logos-cascade">
                 <h3>Our Valued Partners</h3>
                 <div class="cascade-row cascade-row-left">
-                    <img src="../New saya logo.jpeg" alt="SAYA">
-                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
-                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
-                    <img src="../partner logos/SB08.jpeg" alt="SB08">
-                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
-                    <img src="../New saya logo.jpeg" alt="SAYA">
-                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
-                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
-                    <img src="../partner logos/SB08.jpeg" alt="SB08">
-                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
+                    <img src="../New saya logo.jpeg" alt="SAYA" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/SB08.jpeg" alt="SB08" loading="lazy" decoding="async">
+                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment" loading="lazy" decoding="async">
+                    <img src="../New saya logo.jpeg" alt="SAYA" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/SB08.jpeg" alt="SB08" loading="lazy" decoding="async">
+                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment" loading="lazy" decoding="async">
                 </div>
                 <div class="cascade-row cascade-row-right">
-                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
-                    <img src="../partner logos/SB08.jpeg" alt="SB08">
-                    <img src="../New saya logo.jpeg" alt="SAYA">
-                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
-                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
-                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment">
-                    <img src="../partner logos/SB08.jpeg" alt="SB08">
-                    <img src="../New saya logo.jpeg" alt="SAYA">
-                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm">
-                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm">
+                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment" loading="lazy" decoding="async">
+                    <img src="../partner logos/SB08.jpeg" alt="SB08" loading="lazy" decoding="async">
+                    <img src="../New saya logo.jpeg" alt="SAYA" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm" loading="lazy" decoding="async">
+                    <img src="../Hapitec Company Logo/Hapitec Fully Transparent.png" alt="Hapitec Investment" loading="lazy" decoding="async">
+                    <img src="../partner logos/SB08.jpeg" alt="SB08" loading="lazy" decoding="async">
+                    <img src="../New saya logo.jpeg" alt="SAYA" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ginas country farm.jpeg" alt="Ginas Country Farm" loading="lazy" decoding="async">
+                    <img src="../partner logos/Ngwezi farm.jpeg" alt="Ngwezi Farm" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -3638,138 +3666,138 @@
             <div class="event-gallery">
                 <h3>Launch Event Gallery</h3>
                 <div class="gallery-grid">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0213(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0279.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0326(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0326.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0327(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0327.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0328.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0329.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0330.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0331.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0332.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0333.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0334.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0335.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0336.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0337.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0338.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0339(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0339.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0340.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0341.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0342.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0343.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0344.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0345.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0346(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0346.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0347.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0348.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0349.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0350.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0351(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0351.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0352.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0353.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0354(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0354.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0355(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0355.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0356.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0357.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0358(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0358.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0359.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0360.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0361.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0362.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0363.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0364(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0364.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0365.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0366.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0367.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0368(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0368.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0369.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0370.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0371(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0371.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0372.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0373(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0373.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0374.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0375(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0375.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0376.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0377.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0378(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0378.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0379.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0380.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0381(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0381.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0382.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0383.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0384.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0385.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0386.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0387.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0388.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0389.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0390.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0391.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0392.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0393.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0394.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0395.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0396.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0397.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0398.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0399.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0400.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0401.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0402.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0403.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0404.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0405.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0406.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0407.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0408.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0409.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0410.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0411(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0411.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0412.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0413.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0414.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0415.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0416.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0417.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0418.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0419.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0420.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0421.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0422.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0423.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0424.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0425.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0426.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0427.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0428.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0429.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0430.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0431.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0432.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0433(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0433.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0434.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0435.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0436.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0437.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
-                    <img src="SAYA launch meeting/IMG-20260614-WA0438.jpg" alt="SAYA Launch Event" class="launch-gallery-img">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0213(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0279.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0326(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0326.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0327(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0327.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0328.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0329.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0330.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0331.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0332.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0333.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0334.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0335.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0336.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0337.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0338.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0339(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0339.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0340.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0341.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0342.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0343.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0344.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0345.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0346(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0346.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0347.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0348.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0349.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0350.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0351(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0351.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0352.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0353.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0354(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0354.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0355(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0355.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0356.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0357.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0358(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0358.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0359.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0360.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0361.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0362.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0363.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0364(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0364.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0365.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0366.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0367.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0368(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0368.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0369.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0370.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0371(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0371.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0372.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0373(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0373.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0374.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0375(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0375.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0376.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0377.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0378(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0378.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0379.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0380.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0381(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0381.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0382.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0383.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0384.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0385.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0386.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0387.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0388.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0389.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0390.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0391.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0392.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0393.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0394.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0395.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0396.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0397.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0398.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0399.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0400.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0401.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0402.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0403.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0404.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0405.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0406.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0407.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0408.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0409.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0410.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0411(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0411.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0412.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0413.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0414.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0415.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0416.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0417.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0418.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0419.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0420.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0421.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0422.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0423.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0424.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0425.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0426.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0427.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0428.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0429.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0430.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0431.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0432.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0433(1).jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0433.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0434.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0435.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0436.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0437.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
+                    <img src="SAYA launch meeting/IMG-20260614-WA0438.jpg" alt="SAYA Launch Event" class="launch-gallery-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -3822,7 +3850,7 @@
 
             <div class="card">
                 <a href="images/hapitec-youth-day-edena-school-chingola.png" target="_blank">
-                    <img src="images/hapitec-youth-day-edena-school-chingola.png" alt="Pupils and Hapitec representative at Edena Community School, Chingola, beside the Ministry of Education school sign" class="news-card-img">
+                    <img src="images/hapitec-youth-day-edena-school-chingola.png" alt="Pupils and Hapitec representative at Edena Community School, Chingola, beside the Ministry of Education school sign" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -3847,7 +3875,7 @@
 
             <div class="card">
                 <a href="images/rotary-charter-certificate-presentation.png" target="_blank">
-                    <img src="images/rotary-charter-certificate-presentation.png" alt="Charter certificate presented to Mr. Happy Mwewa Molobeka at Rotary Club of Chililabombwe Metro Charter Night" class="news-card-img">
+                    <img src="images/rotary-charter-certificate-presentation.png" alt="Charter certificate presented to Mr. Happy Mwewa Molobeka at Rotary Club of Chililabombwe Metro Charter Night" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -3873,27 +3901,27 @@
                 <div class="gallery-grid" style="margin-top:12px;">
                     <div class="gallery-item">
                         <a href="images/rotary-charter-night-reception-line.png" target="_blank">
-                            <img src="images/rotary-charter-night-reception-line.png" alt="Guests at Charter Night reception for Rotary Club of Chililabombwe Metro">
+                            <img src="images/rotary-charter-night-reception-line.png" alt="Guests at Charter Night reception for Rotary Club of Chililabombwe Metro" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/rotary-charter-night-celebration.png" target="_blank">
-                            <img src="images/rotary-charter-night-celebration.png" alt="Charter Night attendees applauding during the Rotary celebration">
+                            <img src="images/rotary-charter-night-celebration.png" alt="Charter Night attendees applauding during the Rotary celebration" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/rotary-charter-certificate-presentation.png" target="_blank">
-                            <img src="images/rotary-charter-certificate-presentation.png" alt="Presentation of Rotary charter certificate on stage">
+                            <img src="images/rotary-charter-certificate-presentation.png" alt="Presentation of Rotary charter certificate on stage" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/rotary-charter-stage-group-photo.png" target="_blank">
-                            <img src="images/rotary-charter-stage-group-photo.png" alt="Charter members and officials on stage with certificates">
+                            <img src="images/rotary-charter-stage-group-photo.png" alt="Charter members and officials on stage with certificates" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/rotary-charter-pinning-ceremony.png" target="_blank">
-                            <img src="images/rotary-charter-pinning-ceremony.png" alt="Rotary pinning ceremony at Charter Night">
+                            <img src="images/rotary-charter-pinning-ceremony.png" alt="Rotary pinning ceremony at Charter Night" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -3901,7 +3929,7 @@
 
             <div class="card">
                 <a href="images/breeding-upgrade-delivery-from-linden-farm.png" target="_blank">
-                    <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Delivery of improved pig genetics with pickup transporting animals to the farm" class="news-card-img">
+                    <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Delivery of improved pig genetics with pickup transporting animals to the farm" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -3929,37 +3957,37 @@
                 <div class="gallery-grid" style="margin-top:12px;">
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-delivery-from-linden-farm.png" target="_blank">
-                            <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Pickup truck delivery of pigs from Linden Farm partnership">
+                            <img src="images/breeding-upgrade-delivery-from-linden-farm.png" alt="Pickup truck delivery of pigs from Linden Farm partnership" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-team-receiving-pigs.png" target="_blank">
-                            <img src="images/breeding-upgrade-team-receiving-pigs.png" alt="Team receiving and handling pigs at the farm buildings">
+                            <img src="images/breeding-upgrade-team-receiving-pigs.png" alt="Team receiving and handling pigs at the farm buildings" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-on-farm-inspection.png" target="_blank">
-                            <img src="images/breeding-upgrade-on-farm-inspection.png" alt="On-farm inspection with Pietrain and TN 70 animals">
+                            <img src="images/breeding-upgrade-on-farm-inspection.png" alt="On-farm inspection with Pietrain and TN 70 animals" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-pietrain-boar.png" target="_blank">
-                            <img src="images/breeding-upgrade-pietrain-boar.png" alt="Pietrain boar in the pen">
+                            <img src="images/breeding-upgrade-pietrain-boar.png" alt="Pietrain boar in the pen" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-pietrain-and-tn70-gilts.png" target="_blank">
-                            <img src="images/breeding-upgrade-pietrain-and-tn70-gilts.png" alt="Pietrain boar with TN 70 gilts in housing">
+                            <img src="images/breeding-upgrade-pietrain-and-tn70-gilts.png" alt="Pietrain boar with TN 70 gilts in housing" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-veterinary-pen-check.png" target="_blank">
-                            <img src="images/breeding-upgrade-veterinary-pen-check.png" alt="Health check with pigs in the brick and concrete pen">
+                            <img src="images/breeding-upgrade-veterinary-pen-check.png" alt="Health check with pigs in the brick and concrete pen" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/breeding-upgrade-pigs-in-main-pen.png" target="_blank">
-                            <img src="images/breeding-upgrade-pigs-in-main-pen.png" alt="Pigs feeding in the main pen">
+                            <img src="images/breeding-upgrade-pigs-in-main-pen.png" alt="Pigs feeding in the main pen" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -3967,7 +3995,7 @@
 
             <div class="card">
                 <a href="images/657569126_1631829771997555_aquaculture-harvest.jpg" target="_blank">
-                    <img src="images/657569126_1631829771997555_aquaculture-harvest.jpg" alt="Harvested tilapia recovered after pond incident" class="news-card-img">
+                    <img src="images/657569126_1631829771997555_aquaculture-harvest.jpg" alt="Harvested tilapia recovered after pond incident" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -3987,22 +4015,22 @@
                 <div class="gallery-grid" style="margin-top:12px;">
                     <div class="gallery-item">
                         <a href="images/pond-story-anthill-collapse.png" target="_blank">
-                            <img src="images/pond-story-anthill-collapse.png" alt="Earth from anthill collapsed into the lined pond after heavy rains">
+                            <img src="images/pond-story-anthill-collapse.png" alt="Earth from anthill collapsed into the lined pond after heavy rains" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/pond-story-team-salvaging-in-pond.png" target="_blank">
-                            <img src="images/pond-story-team-salvaging-in-pond.png" alt="Team working waist-deep in the pond during salvage">
+                            <img src="images/pond-story-team-salvaging-in-pond.png" alt="Team working waist-deep in the pond during salvage" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/pond-story-harvest-fish-containers-1.png" target="_blank">
-                            <img src="images/pond-story-harvest-fish-containers-1.png" alt="Harvested tilapia moved into containers of water">
+                            <img src="images/pond-story-harvest-fish-containers-1.png" alt="Harvested tilapia moved into containers of water" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="gallery-item">
                         <a href="images/pond-story-harvest-fish-containers-2.png" target="_blank">
-                            <img src="images/pond-story-harvest-fish-containers-2.png" alt="Sorting and holding recovered fish at the ponds">
+                            <img src="images/pond-story-harvest-fish-containers-2.png" alt="Sorting and holding recovered fish at the ponds" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -4010,7 +4038,7 @@
 
             <div class="card">
                 <a href="images/Pond construction.jpg" target="_blank">
-                    <img src="images/Pond construction.jpg" alt="Aquaculture empowerment event with LATICE and Farm Feed visitors" class="news-card-img">
+                    <img src="images/Pond construction.jpg" alt="Aquaculture empowerment event with LATICE and Farm Feed visitors" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -4030,7 +4058,7 @@
 
             <div class="card">
                 <a href="images/588549763_1196398269091590_2115167589575362366_n.jpg" target="_blank">
-                    <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="Youth Agricultural Leadership Program" class="news-card-img">
+                    <img src="images/588549763_1196398269091590_2115167589575362366_n.jpg" alt="Youth Agricultural Leadership Program" class="news-card-img" loading="lazy" decoding="async">
                 </a>
                 <h2>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
