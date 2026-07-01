@@ -1039,7 +1039,7 @@
             }
 
             .dropdown {
-                position: static;
+                position: relative;
                 width: 100%;
             }
 
@@ -1056,12 +1056,12 @@
             }
 
             .dropdown-content {
-                position: absolute;
-                top: calc(100% + 6px);
-                left: 24px;
+                position: relative;
+                top: auto;
+                left: 0;
                 right: auto;
-                width: calc(100% - 48px);
-                margin: 0;
+                width: auto;
+                margin: 8px 24px 12px 24px;
                 background: #ffffff;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
                 border: 1px solid #e5e7eb;
@@ -1072,6 +1072,7 @@
                 visibility: hidden;
                 pointer-events: none;
                 transform: translateY(-8px);
+                transform-origin: top;
                 max-height: 0;
                 transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, max-height 0.25s ease;
             }
@@ -1182,7 +1183,7 @@
             }
 
             .dropdown {
-                position: static;
+                position: relative;
                 width: 100%;
             }
 
@@ -1199,12 +1200,12 @@
             }
 
             .dropdown-content {
-                position: absolute;
-                top: calc(100% + 6px);
-                left: 24px;
+                position: relative;
+                top: auto;
+                left: 0;
                 right: auto;
-                width: calc(100% - 48px);
-                margin: 0;
+                width: auto;
+                margin: 8px 24px 12px 24px;
                 background: #ffffff;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
                 border: 1px solid #e5e7eb;
@@ -1215,6 +1216,7 @@
                 visibility: hidden;
                 pointer-events: none;
                 transform: translateY(-8px);
+                transform-origin: top;
                 max-height: 0;
                 transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, max-height 0.25s ease;
             }
