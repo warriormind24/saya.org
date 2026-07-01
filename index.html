@@ -484,6 +484,95 @@
             line-height: 1.3;
         }
 
+        .impact-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 860px;
+            margin: 0 auto 28px;
+            animation: fadeInUp 1s ease 1.1s both;
+        }
+
+        .impact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #bbf7d0;
+            border-radius: 999px;
+            padding: 10px 14px;
+            color: #166534;
+            font-weight: 600;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+        }
+
+        .impact-pill strong {
+            color: #15803d;
+        }
+
+        .story-highlight {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 20px;
+            align-items: center;
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
+            border: 1px solid #bbf7d0;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 24px 0 8px;
+        }
+
+        .story-highlight h3 {
+            color: #166534;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .story-highlight p {
+            color: #374151;
+        }
+
+        .story-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .membership-spotlight {
+            display: grid;
+            gap: 12px;
+            padding: 20px 22px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ecfdf5, #fef3c7);
+            border: 1px solid #86efac;
+            margin-bottom: 24px;
+        }
+
+        .membership-spotlight h3 {
+            color: #166534;
+            margin-bottom: 4px;
+        }
+
+        .membership-spotlight p {
+            color: #374151;
+        }
+
+        .membership-spotlight ul {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .membership-spotlight li {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
         .scroll-hint {
             display: inline-flex;
             flex-direction: column;
@@ -2446,13 +2535,19 @@
                         <span>Technology Projects</span>
                     </div>
                     <div class="hero-stat">
-                        <strong>12</strong>
-                        <span>Farming Communities</span>
+                        <strong>10</strong>
+                        <span>Provincial Growth Goals</span>
                     </div>
                     <div class="hero-stat">
                         <strong>1,000+</strong>
                         <span>Farmers Supported</span>
                     </div>
+                </div>
+
+                <div class="impact-strip" role="list" aria-label="SAYA impact highlights">
+                    <div class="impact-pill" role="listitem"><strong>🌱</strong> Youth-led agricultural innovation</div>
+                    <div class="impact-pill" role="listitem"><strong>🤝</strong> Strong partnerships across Zambia</div>
+                    <div class="impact-pill" role="listitem"><strong>📈</strong> Skills, markets, and opportunity</div>
                 </div>
 
                 <div class="buttons">
@@ -2538,6 +2633,25 @@
                 <div class="subtitle">Who We Are</div>
                 <h1>About SAYA</h1>
                 <p>A people-driven movement made up of individuals from different backgrounds coming together for a common goal: empowering youths, women, and people with disabilty through innovative programs, strategic partnerships, and community empowerment.</p>
+            </div>
+
+            <div class="story-highlight">
+                <div>
+                    <h3>From local farms to national impact</h3>
+                    <p>SAYA connects farmers, youth, and partners through practical support, training, and trusted networks that turn ideas into thriving agricultural businesses.</p>
+                    <div class="story-actions">
+                        <button class="btn btn-primary btn-small" onclick="navigateTo('membership')">Become a Member</button>
+                        <button class="btn btn-outline btn-small" onclick="navigateTo('stakeholders')">See Our Partners</button>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>What members gain:</strong></p>
+                    <ul>
+                        <li>• Practical training and mentorship</li>
+                        <li>• Access to growing networks and opportunities</li>
+                        <li>• A stronger voice in sustainable agriculture</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="card">
@@ -3345,6 +3459,16 @@
                 <div class="subtitle">Join Our Movement</div>
                 <h1>Membership</h1>
                 <p>Become part of a growing community of young agricultural leaders</p>
+            </div>
+
+            <div class="membership-spotlight">
+                <h3>Why join SAYA?</h3>
+                <p>Members are not just signing up—they are stepping into a movement that builds leadership, creates opportunity, and strengthens food systems across Zambia.</p>
+                <ul>
+                    <li>✔ Learn from experienced farmers, trainers, and mentors</li>
+                    <li>✔ Take part in projects that create visible community impact</li>
+                    <li>✔ Grow your network and your confidence as an agricultural leader</li>
+                </ul>
             </div>
 
             <div class="card">
@@ -4389,7 +4513,7 @@
             <p class="footer-links">
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
-                <a href="#">Facebook</a>
+                <a href="https://www.facebook.com/profile.php?id=61589996859979" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a href="#">LinkedIn</a>
             </p>
         </div>
